@@ -1,0 +1,24 @@
+{
+  "name": "parcel-starter",
+  "version": "1.0.0",
+  "description": "Front-end starter kit using the Parcel bundler",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "inputmask": "^5.0.5",
+    "parcel-bundler": "latest",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "pug": "^3.0.0",
+    "sass": "^1.26.8",
+    "swiper": "^6.1.1"
+  },
+  "scripts": {
+    "clean": "rm dist",
+    "start": "parcel src/index.pug --open",
+    "build-prod-github": "parcel build src/index.pug --public-url www/stroy-sales_dev/dist --no-content-hash",
+    "build-prod": "parcel build src/index.pug  --no-content-hash"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
