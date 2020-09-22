@@ -18,7 +18,7 @@
   "scripts": {
     "clean": "rm dist",
     "start": "parcel src/index.pug --open",
-    "build-prod-github": "parcel build src/index.pug --public-url www/rauberg_dev/dist",
+    "build-prod-github": "parcel build src/index.pug --public-url ./dist/",
     "build-prod": "parcel build src/index.pug  --no-content-hash"
   },
   "keywords": [],
