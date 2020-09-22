@@ -1,6 +1,8 @@
 .catalog {
-    display: flex;
-    justify-content: flex-end;
+    .fp-tableCell {
+        display: flex;
+        justify-content: flex-end;
+    }
 
     &__title-wrap {
         padding-top: 169px;
@@ -41,8 +43,14 @@
         }
 
         &:hover {
-            .catalog__grid-item-img svg:nth-child(2) path {
-                stroke-dashoffset: 0;
+            .catalog__grid-item-img svg:nth-child(2) {
+
+                path,
+                rect,
+                circle {
+                    stroke-dashoffset: 0;
+                    transition: all ease-in-out 2.5s;
+                }
             }
         }
     }
@@ -57,18 +65,29 @@
     &__grid-item-img {
         margin-top: 72px;
         position: relative;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+
+        svg,
+        img {
+            max-height: 100%;
+        }
 
         svg:nth-child(2),
         img:nth-child(2) {
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
 
-            path {
+            path,
+            rect,
+            circle {
                 stroke: $blue;
-                stroke-dasharray: 1000;
-                stroke-dashoffset: 1000;
-                transition: all ease-in-out 2.5s;
+                stroke-dasharray: 1500;
+                stroke-dashoffset: 1500;
+                transition: all ease-in-out .8s;
             }
         }
     }

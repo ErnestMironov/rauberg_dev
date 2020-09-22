@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Front-end starter kit using the Parcel bundler",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "fullpage": "^1.5.1"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "fullpage.js": "^3.0.9",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
     "parcel-bundler": "latest",
