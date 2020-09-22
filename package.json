@@ -5,9 +5,12 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "inputmask": "^5.0.5",
+    "jquery": "^3.5.1",
     "parcel-bundler": "latest",
     "parcel-plugin-clean-dist": "0.0.6",
+    "postcss": "^8.0.6",
     "pug": "^3.0.0",
     "sass": "^1.26.8",
     "swiper": "^6.1.1"
@@ -15,7 +18,7 @@
   "scripts": {
     "clean": "rm dist",
     "start": "parcel src/index.pug --open",
-    "build-prod-github": "parcel build src/index.pug --public-url www/stroy-sales_dev/dist --no-content-hash",
+    "build-prod-github": "parcel build src/index.pug --public-url www/rauberg_dev/dist --no-content-hash",
     "build-prod": "parcel build src/index.pug  --no-content-hash"
   },
   "keywords": [],
