@@ -13,4 +13,4 @@ var e,t=arguments[3],n=require("process");!function(e,t){"use strict";"object"==
 },{}],"KIzB":[function(require,module,exports) {
 "use strict";var e=t(require("./utils/pasteSvg")),u=t(require("./utils/sayHello"));function t(e){return e&&e.__esModule?e:{default:e}}(0,u.default)(),(0,e.default)();
 },{"./utils/pasteSvg":"HMR1","./utils/sayHello":"mEub"}]},{},["KIzB"], null)
-//# sourceMappingURL=/main.d8ebb8d6.js.map
+//# sourceMappingURL=--no-content-hash/main.22d3d21a.js.map
