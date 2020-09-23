@@ -9,8 +9,10 @@ sayHello();
 pasteSVG();
 sliders();
 
-new fullpage('#fullpage', {
-	paddingTop: `60px`
-});
+if (screen.width > 1000) {
+	new fullpage('#fullpage', {
+		paddingTop: `60px`
+	});
+}
 
 //methods
