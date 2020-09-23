@@ -1,0 +1,10 @@
+div(class="popular container section")
+    h2(class="subtitle") ПОПУЛЯРНЫЕ ТОВАРЫ
+    div(class="popular__slider swiper-container")
+        div(class="swiper-wrapper")
+            - var n = 0;
+            while n < 10
+                - n++
+                div(class="swiper-slide") 
+                    include product-card.pug   
+        div(class="popular__slider-pag")

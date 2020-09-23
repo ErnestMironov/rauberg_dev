@@ -1,0 +1,106 @@
+.product-card {
+    background-color: $dark;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 27px 10px 13px;
+    transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) .2s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &__articul {
+        color: $gold;
+        align-self: flex-end;
+        padding-right: 32px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    &__img-wrap {
+        align-self: center;
+        height: 220px;
+        width: 220px;
+        margin-top: 18px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__txt {
+        margin-top: 37px;
+        padding: 0 35px;
+    }
+
+    &__title {
+        font-size: 25px;
+        line-height: 29px;
+    }
+
+    &__char-list {
+        margin-top: 43px;
+    }
+
+    &__char-item {
+        display: flex;
+        margin-bottom: 9px;
+    }
+
+    &__char {
+        font-size: 13px;
+        line-height: 15px;
+        color: #97A1B8;
+    }
+
+    &__dotted {
+        flex: auto;
+        border-bottom: 1px dotted $gold;
+        position: relative;
+        bottom: 3px;
+        margin: 0 4px;
+    }
+
+    &__char-val {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: right;
+        color: #BBC3D5;
+    }
+
+    &__price {
+        margin-top: 29px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 18px;
+        display: inline-block;
+
+        &:after {
+            content: '₽';
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 18px;
+            color: $gold;
+            margin-left: 8px;
+            position: relative;
+            bottom: -3px;
+        }
+    }
+
+    &__recommend {
+        margin-top: 8px;
+        color: $blue;
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: 21px;
+    }
+}
