@@ -1,0 +1,78 @@
+.search-box {
+	border: solid 1px white;
+	display: inline-block;
+	position: relative;
+	border-radius: 50px;
+
+	input[type="text"] {
+		font: 400 14px 'Play';
+		color: white;
+		background: transparent;
+		width: 20px;
+		height: 20px;
+		border: none;
+		box-sizing: border-box;
+		border-radius: 50px;
+		transition: all 500ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:focus,
+		&:not(:placeholder-shown) {
+			width: 300px;
+			height: 45px;
+			padding: 5px 40px 5px 12px;
+			transition: all 500ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+
+			+span {
+				bottom: 11px;
+				right: 10px;
+				transition: all 250ms ease-out 500ms;
+			}
+
+			+span:after {
+				top: 0;
+				height: 100%;
+				right: 12px;
+				opacity: 1;
+				transition: all 250ms ease-out 700ms;
+			}
+
+			+span:before {
+				height: 100%;
+			}
+		}
+	}
+
+	span {
+		width: 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: -13px;
+		right: -15px;
+		cursor: pointer;
+		transition: all 250ms ease-out 250ms;
+
+		&:before,
+		&:after {
+			content: '';
+			height: 14px;
+			border-left: solid 1px white;
+			position: absolute;
+			transform: rotate(-45deg);
+		}
+
+		&:after {
+			transform: rotate(45deg);
+			opacity: 0;
+			top: -20px;
+			right: -10px;
+			transition: all 250ms ease-out;
+		}
+	}
+}

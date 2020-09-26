@@ -64,8 +64,12 @@
         }
 
         &:hover {
-            background-color: $grey_light;
+            background-color: $gold;
             color: $dark;
+
+            .catalog__number {
+                color: $dark;
+            }
 
             .catalog__grid-item-img svg:nth-child(2) {
 
@@ -74,6 +78,10 @@
                 circle {
                     stroke-dashoffset: 0;
                     transition: all ease-in-out 2.5s;
+
+                    @include mobile {
+                        transition: 0;
+                    }
                 }
             }
         }
@@ -124,10 +132,14 @@
             path,
             rect,
             circle {
-                stroke: $blue;
+                stroke: $dark;
                 stroke-dasharray: 1500;
                 stroke-dashoffset: 1500;
                 transition: all ease-in-out 1.5s;
+
+                @include mobile {
+                    transition: 0;
+                }
             }
         }
 
