@@ -44,16 +44,34 @@ export default function header() {
         closeBtn.addEventListener(`click`, close);
 
         trigger.addEventListener(`click`, e => {
-            trigger.classList.toggle('active')
+            trigger.classList.add('active')
             popup.classList.add(`active`)
         })
     }());
 
     (function () {
-        const btn = document.querySelector(`.burger`)
+        const btn = document.querySelector(`.burger`),
+            popup = document.querySelector(`.menu-popup`),
+            closeBtn = document.querySelector(`.menu-popup__close`);
+
+        function close() {
+            popup.classList.remove(`active`);
+            btn.classList.remove(`active`);
+
+        };
 
         btn.addEventListener(`click`, e => {
-            btn.classList.toggle('active')
+            btn.classList.add('active')
+            popup.classList.add('active')
+        })
+
+        closeBtn.addEventListener(`click`, close)
+
+        popup.addEventListener(`click`, e => {
+            if (popup === e.target) {
+                close();
+            }
+            console.log(e.target)
         })
     }())
 }
