@@ -10,6 +10,19 @@ import 'swiper/swiper-bundle.css';
 Swiper.use([Pagination, Autoplay, Scrollbar]);
 
 export default function sliders() {
+    const mainSlider = new Swiper(`.main-slider`, {
+        grabCursor: `true`,
+        slideToClickedSlide: `true`,
+        direction: `vertical`,
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: '.main-slider__pag',
+            type: 'bullets',
+            clickable: `true`
+        },
+    });
     const popularSlider = new Swiper(`.popular__slider`, {
         slidesPerView: `auto`,
         spaceBetween: 10,

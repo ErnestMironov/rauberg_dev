@@ -13,7 +13,7 @@ header();
 
 if (screen.width > 1000) {
 	new fullpage('#fullpage', {
-		paddingTop: `60px`
+		// paddingTop: `60px`
 	});
 }
 
