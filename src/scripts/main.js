@@ -13,7 +13,18 @@ header();
 
 if (screen.width > 1000) {
 	new fullpage('#fullpage', {
-		// paddingTop: `60px`
+		// paddingTop: `60px`,
+		onLeave: function (section, origin, destination, direction) {
+			const header = document.querySelector(`.header`)
+			const fullpage = document.querySelector(`#fullpage`)
+			setTimeout(() => {
+				if (fullpage.style.transform !== `translate3d(0px, 0px, 0px)`) {
+					header.classList.add(`fixed`)
+				} else {
+					header.classList.remove(`fixed`)
+				}
+			}, 500);
+		}
 	});
 }
 

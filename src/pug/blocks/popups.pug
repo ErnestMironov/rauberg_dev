@@ -4,31 +4,37 @@
             span &#10006;
             |  закрыть
         ul.prod-popup__list
-            li.prod-popup__list-item
+            li.prod-popup__list-item(data-prod-title="meat")
                 a.prod-popup__link(href="!#")
-                    span 1
+                    span 01
                     |  мясорубки
-            li.prod-popup__list-item
+            li.prod-popup__list-item(data-prod-title="mix")
                 a.prod-popup__link(href="!#")
-                    span 2
+                    span 02
                     |  планетарные миксеры
-            li.prod-popup__list-item
+            li.prod-popup__list-item(data-prod-title="vacuum")
                 a.prod-popup__link(href="!#")
-                    span 3
+                    span 03
                     |  вертикальные пылесосы
-            li.prod-popup__list-item
+            li.prod-popup__list-item(data-prod-title="juice")
                 a.prod-popup__link(href="!#")
-                    span 4
+                    span 04
                     |  соковыжималки
-            li.prod-popup__list-item
+            li.prod-popup__list-item(data-prod-title="grill")
                 a.prod-popup__link(href="!#")
-                    span 5
+                    span 05
                     |  электрогрили
-            li.prod-popup__list-item
+            li.prod-popup__list-item(data-prod-title="accesories")
                 a.prod-popup__link(href="!#")
-                    span 6
+                    span 06
                     |  аксессуары
     .prod-popup__right
+        img(src="images/products/1.jpg" data-prod-preview="meat").prod-popup__preview.active
+        img(src="images/products/2.jpg" data-prod-preview="mix").prod-popup__preview
+        img(src="images/products/1.jpg" data-prod-preview="vacuum").prod-popup__preview.active
+        img(src="images/products/2.jpg" data-prod-preview="juice").prod-popup__preview
+        img(src="images/products/1.jpg" data-prod-preview="grill").prod-popup__preview.active
+        img(src="images/products/2.jpg" data-prod-preview="accesories").prod-popup__preview
 .menu-popup
     .menu-popup__wrap
         .menu-popup__close 

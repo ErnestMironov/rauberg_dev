@@ -33,9 +33,12 @@ export default function header() {
     (function () {
         const trigger = document.querySelector(`.products-trigger`),
             popup = document.querySelector(`.prod-popup`),
-            closeBtn = document.querySelector(`.prod-popup__close`)
+            closeBtn = document.querySelector(`.prod-popup__close`),
+            menuItems = document.querySelectorAll(`.prod-popup__list-item`),
+            previews = document.querySelectorAll(`.prod-popup__preview`)
 
         function close() {
+            fullpage_api.setAllowScrolling(true);
             popup.classList.remove(`active`);
             trigger.classList.remove(`active`);
 
@@ -44,8 +47,20 @@ export default function header() {
         closeBtn.addEventListener(`click`, close);
 
         trigger.addEventListener(`click`, e => {
+            fullpage_api.setAllowScrolling(false);
             trigger.classList.add('active')
             popup.classList.add(`active`)
+        })
+
+        menuItems.forEach(element => {
+            element.addEventListener(`mouseenter`, () => {
+                const preview = element.getAttribute(`data-prod-title`);
+
+                previews.forEach(element => {
+                    element.classList.remove(`active`)
+                });
+                document.querySelector(`[data-prod-preview="${preview}"]`).classList.add(`active`);
+            })
         })
     }());
 
@@ -55,12 +70,14 @@ export default function header() {
             closeBtn = document.querySelector(`.menu-popup__close`);
 
         function close() {
+            fullpage_api.setAllowScrolling(true);
             popup.classList.remove(`active`);
             btn.classList.remove(`active`);
 
         };
 
         btn.addEventListener(`click`, e => {
+            fullpage_api.setAllowScrolling(false);
             btn.classList.add('active')
             popup.classList.add('active')
         })
@@ -71,7 +88,6 @@ export default function header() {
             if (popup === e.target) {
                 close();
             }
-            console.log(e.target)
         })
     }())
 }

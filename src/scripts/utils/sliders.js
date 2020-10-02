@@ -1,19 +1,20 @@
 import Swiper, {
     Pagination,
     Autoplay,
-    Scrollbar
+    Scrollbar,
+    EffectFade
 } from 'swiper';
 // import Swiper styles
 import 'swiper/swiper-bundle.css';
 
 // configure Swiper to use modules
-Swiper.use([Pagination, Autoplay, Scrollbar]);
+Swiper.use([Pagination, Autoplay, Scrollbar, EffectFade]);
 
 export default function sliders() {
     const mainSlider = new Swiper(`.main-slider`, {
         grabCursor: `true`,
         slideToClickedSlide: `true`,
-        direction: `vertical`,
+        effect: 'fade',
         autoplay: {
             delay: 3000,
         },
