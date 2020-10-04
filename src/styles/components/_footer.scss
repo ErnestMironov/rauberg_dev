@@ -1,0 +1,119 @@
+.footer {
+    background-color: $dark;
+
+    &.section .fp-tableCell {
+        padding-top: 43px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__left {
+        margin-right: 180px;
+
+        @include container {
+            margin-right: 6vw;
+        }
+    }
+
+    &__desc {
+        max-width: 330px;
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        color: #EBECF5;
+
+        @include container {
+            max-width: 20vw;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: stretch;
+
+        @include container {
+            flex: auto;
+            justify-content: space-between;
+        }
+    }
+
+    &__column {
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include container {
+            margin-right: 30px;
+        }
+    }
+
+    &__title {
+        a {
+            color: $gold;
+            text-decoration: none;
+            font-size: 25px;
+            line-height: 29px;
+        }
+    }
+
+    &__list {
+        margin-top: 12px;
+    }
+
+    &__list-item {
+        margin-bottom: 4px;
+
+        &:hover {
+            .footer__list-item-txt {
+                transform: translateX(8px);
+            }
+        }
+
+        a {
+            font-size: 18px;
+            line-height: 21px;
+            color: #EBECF5;
+            text-decoration: none;
+        }
+    }
+
+
+    &__list-number {
+        font-size: 10px;
+        line-height: 16px;
+        color: $gold;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    &__list-item-txt {
+        display: inline-block;
+        transition: .1s linear;
+    }
+
+    &__soc-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: #56575C;
+        margin-right: 15px;
+    }
+
+    &__bottom {
+        margin-top: 28px;
+        border-top: 1px solid #56575C;
+        padding: 20px 0px 24px;
+        font-size: 15px;
+        line-height: 17px;
+        text-align: center;
+        color: #C5C6D1;
+    }
+}

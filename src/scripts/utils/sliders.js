@@ -1,5 +1,6 @@
 import Swiper, {
     Pagination,
+    Navigation,
     Autoplay,
     Scrollbar,
     EffectFade
@@ -8,15 +9,20 @@ import Swiper, {
 import 'swiper/swiper-bundle.css';
 
 // configure Swiper to use modules
-Swiper.use([Pagination, Autoplay, Scrollbar, EffectFade]);
+Swiper.use([Pagination, Navigation, Autoplay, Scrollbar, EffectFade]);
 
 export default function sliders() {
     const mainSlider = new Swiper(`.main-slider`, {
         grabCursor: `true`,
         slideToClickedSlide: `true`,
         effect: 'fade',
+        loop: `true`,
         autoplay: {
             delay: 3000,
+        },
+        navigation: {
+            nextEl: '.main-slider__arrow_down',
+            prevEl: '.main-slider__arrow_up',
         },
         pagination: {
             el: '.main-slider__pag',

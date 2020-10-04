@@ -34,7 +34,7 @@
     transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
     opacity: 0;
     cursor: pointer;
-    
+
     &.active {
         visibility: visible;
         opacity: 1;
@@ -46,7 +46,7 @@
             }
         }
     }
-    
+
     &__wrap {
         background-color: #fff;
         padding: 60px 150px;
@@ -65,8 +65,17 @@
         cursor: pointer;
         transition: 0.2s cubic-bezier(0.39, 0.19, 0.27, 0.79);
 
+        span {
+            transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+            display: inline-block;
+        }
+
         &:hover {
             color: $gold;
+
+            span {
+                transform: rotate(-90deg);
+            }
         }
     }
 

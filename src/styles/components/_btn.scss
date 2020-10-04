@@ -10,9 +10,20 @@
     border-radius: 4px;
     letter-spacing: 1px;
     transition: all .2s linear;
+    display: inline-block;
 
     &:hover {
         background-color: $grey_light;
         color: $dark;
+    }
+
+    &_white {
+        background-color: #fff;
+        color: $dark;
+
+        &:hover {
+            background-color: $dark;
+            color: #fff;
+        }
     }
 }
