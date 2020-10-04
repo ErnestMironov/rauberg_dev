@@ -175,6 +175,7 @@
                 transform: translateY(0);
                 transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
             }
+
             &__right {
                 transform: translateY(0);
                 transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
@@ -191,7 +192,7 @@
         transition: all linear .18s;
         display: flex;
         align-items: center;
-        
+
         span {
             margin-right: 10px;
             transition: all linear .18s;
@@ -207,7 +208,8 @@
         }
     }
 
-    &__left, &__right {
+    &__left,
+    &__right {
         width: 50%;
         position: relative;
     }
@@ -256,11 +258,11 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        transform: translateX(100%);
-        transition: 0.3s ease-in;
+        opacity: 0;
+        transition: 0.25s ease-in;
 
         &.active {
-            transform: translateX(0);
+            opacity: 1;
         }
     }
 }
