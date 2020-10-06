@@ -63,28 +63,31 @@
             border-left: 0;
         }
 
-        &:hover {
-            background-color: $gold;
-            color: $dark;
-
-            .catalog__number {
+        @media screen and (min-width: 678px) {
+            &:hover {
+                background-color: $gold;
                 color: $dark;
-            }
 
-            .catalog__grid-item-img svg:nth-child(2) {
+                .catalog__number {
+                    color: $dark;
+                }
 
-                path,
-                rect,
-                circle {
-                    stroke-dashoffset: 0;
-                    transition: all ease-in-out 2.5s;
+                .catalog__grid-item-img svg:nth-child(2) {
 
-                    @include mobile {
-                        transition: 0;
+                    path,
+                    rect,
+                    circle {
+                        stroke-dashoffset: 0;
+                        transition: all ease-in-out 2.5s;
+
+                        @include mobile {
+                            transition: 0;
+                        }
                     }
                 }
             }
         }
+
     }
 
     &__number {
@@ -104,7 +107,11 @@
 
         @include tablet {
             max-width: 90%;
+            height: 40vh;
+            margin-top: 30px;
         }
+
+        @include mobile {}
 
         @media screen and (min-width:$desktop-width) and (max-height: 800px) {
             margin-top: 5vh;
@@ -129,16 +136,19 @@
             top: 50%;
             transform: translate(-50%, -50%);
 
-            path,
-            rect,
-            circle {
-                stroke: $dark;
-                stroke-dasharray: 1500;
-                stroke-dashoffset: 1500;
-                transition: all ease-in-out 1.5s;
+            @media screen and (min-width: 678px) {
 
-                @include mobile {
-                    transition: 0;
+                path,
+                rect,
+                circle {
+                    stroke: $dark;
+                    stroke-dasharray: 1500;
+                    stroke-dashoffset: 1500;
+                    transition: all ease-in-out 1.5s;
+
+                    @include mobile {
+                        transition: 0;
+                    }
                 }
             }
         }

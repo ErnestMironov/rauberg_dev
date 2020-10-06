@@ -18,6 +18,10 @@
         top: auto;
         width: auto;
 
+        @include mobile {
+            left: 20px;
+        }
+
         .swiper-pagination-bullet {
             margin-right: 10px;
         }
@@ -50,6 +54,10 @@
         @include container {
             right: 25px;
         }
+
+        @include mobile {
+            right: 20px;
+        }
     }
 
     &__separator {
@@ -81,6 +89,21 @@
 
     .swiper-slide {
 
+        @include mobile {
+            height: 100vh;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.305);
+            }
+        }
+
         .container {
             position: relative;
             z-index: 2;
@@ -106,6 +129,11 @@
 
     &__txt-wrap {
         margin-right: 180px;
+
+        @include mobile {
+            margin-right: 0;
+            padding-right: 60px;
+        }
     }
 
     &__title {
@@ -116,6 +144,11 @@
         transition: all .3s linear .2s;
         opacity: 0;
         transform: translateX(100px);
+
+        @include mobile {
+            font-size: 26px;
+            line-height: normal;
+        }
     }
 
     &__desc {
@@ -127,6 +160,11 @@
         opacity: 0;
         transform: translateX(-100px);
         transition: all .3s linear .2s;
+
+        @include mobile {
+            font-size: 18px;
+            line-height: normal;
+        }
     }
 
     &__product-name {
@@ -137,6 +175,11 @@
         text-transform: uppercase;
         opacity: 0;
         transform: translateX(100px);
+
+        @include mobile {
+            font-size: 22px;
+            line-height: normal;
+        }
 
         &_color {
             color: $blue;
@@ -155,6 +198,11 @@
         text-transform: uppercase;
         transition: all ease-out .2s;
 
+        @include mobile {
+            font-size: 16px;
+            line-height: normal;
+        }
+
         &:after {
             content: '';
             display: inline-block;
@@ -163,6 +211,10 @@
             height: 1px;
             background-color: $gold;
             transition: all ease-out .2s;
+
+            @include mobile {
+                width: 120px;
+            }
         }
 
         &:hover {
@@ -170,6 +222,10 @@
 
             &:after {
                 width: 150px;
+
+                @include mobile {
+                    width: 70px;
+                }
             }
         }
     }

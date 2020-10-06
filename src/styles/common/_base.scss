@@ -87,7 +87,9 @@ body {
     }
 
     &:hover {
-      opacity: 1;
+      @include desktop {
+        opacity: 1;
+      }
     }
 
     &-active {

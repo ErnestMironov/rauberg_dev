@@ -2,6 +2,12 @@
     display: flex;
     cursor: pointer;
 
+    @include mobile {
+        border-right: 1px solid #fff;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
     &:hover {
         .products-trigger__square span {
             &:nth-child(1) {
@@ -150,6 +156,10 @@
         text-transform: uppercase;
         color: #EBECF5;
         margin-left: 17px;
+
+        @include mobile {
+            display: none;
+        }
     }
 }
 

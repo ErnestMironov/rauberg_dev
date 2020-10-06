@@ -1,4 +1,9 @@
 .popular {
+
+    @include mobile {
+        margin-top: 60px;
+    }
+
     .fp-tableCell {
         display: flex;
         flex-direction: column;
@@ -12,13 +17,31 @@
         padding-bottom: 40px;
         margin-top: 22px;
 
-        .swiper-slide {
-            max-width: 390px;
+        @include mobile {
+            max-width: 100vw;
+            width: calc(100% + 40px);
+            margin-left: -20px;
         }
 
-        
+        .swiper-slide {
+            max-width: 390px;
+            display: inline-block;
+            width: auto;
+
+            @include mobile {
+                max-width: 100vw;
+                width: calc(100vw - 40px);
+
+            }
+        }
+
+
         .popular__slider-pag {
             margin-top: 5px;
+
+            @include mobile {
+                margin-top: 20px;
+            }
         }
     }
 }

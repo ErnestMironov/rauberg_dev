@@ -32,7 +32,9 @@ export default function sliders() {
     });
     const popularSlider = new Swiper(`.popular__slider`, {
         slidesPerView: `auto`,
-        spaceBetween: 10,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        spaceBetween: 22,
         grabCursor: `true`,
         slideToClickedSlide: `true`,
         autoplay: {
@@ -43,6 +45,13 @@ export default function sliders() {
             type: 'bullets',
             clickable: `true`
         },
+        breakpoints: {
+            640: {
+                spaceBetween: 10,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            }
+        }
     });
     const catalogSlider = new Swiper(`.catalog__slider`, {
         slidesPerView: `1`,

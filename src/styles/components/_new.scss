@@ -1,4 +1,8 @@
 .new {
+    @include mobile {
+        margin-top: 20px;
+    }
+
     .fp-tableCell {
         display: flex;
         align-items: center;
@@ -11,6 +15,11 @@
 
         @include container {
             max-width: 50%;
+        }
+
+        @include mobile {
+            width: auto;
+            max-width: 100%;
         }
     }
 
@@ -31,6 +40,11 @@
         text-transform: uppercase;
         color: #FFFFFF;
         margin-top: 20px;
+
+        @include mobile {
+            font-size: 24px;
+            line-height: normal;
+        }
     }
 
     &__title-color {
@@ -43,6 +57,10 @@
         line-height: 25px;
         letter-spacing: 1px;
         color: #EBECF5;
+
+        @include mobile {
+            margin-top: 20px;
+        }
     }
 
     &__more {
@@ -50,6 +68,11 @@
         margin-top: 80px;
         letter-spacing: 1px;
         text-transform: uppercase;
+
+        @include mobile {
+            width: 100%;
+            margin-top: 30px;
+        }
     }
 
     &__right {
@@ -57,6 +80,10 @@
 
         @include container {
             max-width: 38%;
+        }
+
+        @include mobile {
+            display: none;
         }
 
         &:hover {
@@ -99,5 +126,18 @@
         object-position: center;
         max-height: 65vh;
         max-width: 100%;
+
+        &_mobile {
+            display: none;
+
+            @include mobile {
+                display: block;
+            }
+        }
+
+        @include mobile {
+            position: static;
+            margin-top: 20px;
+        }
     }
 }
