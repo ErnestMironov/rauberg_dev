@@ -1,6 +1,24 @@
 export default function header() {
+
+    function canScrolling(bool) {
+        if (bool) {
+            if (screen.width < 1023) {
+                document.body.style.overflow = `auto`
+            } else {
+                fullpage_api.setAllowScrolling(true);
+            }
+        } else {
+            if (screen.width < 1023) {
+                document.body.style.overflow = `hidden`
+            } else {
+                fullpage_api.setAllowScrolling(false);
+            }
+        }
+    }
+
     (function () {
         const searchBox = document.querySelector('.search-box'),
+            wrap = document.querySelector('.header__search-box'),
             input = document.querySelector('.search-box input'),
             closeBtn = document.querySelector('.search-box__close');
 
@@ -8,6 +26,7 @@ export default function header() {
             setTimeout(() => {
                 if (searchBox.classList.contains(`active`)) {
                     searchBox.classList.remove(`active`);
+                    wrap.classList.remove(`active`);
                     input.value = ``;
                     input.blur();
                     closeBtn.removeEventListener(`click`, close)
@@ -18,6 +37,7 @@ export default function header() {
         searchBox.addEventListener(`click`, e => {
             setTimeout(() => {
                 searchBox.classList.add(`active`)
+                wrap.classList.add(`active`)
                 input.focus()
                 closeBtn.addEventListener(`click`, close)
             })
@@ -37,8 +57,9 @@ export default function header() {
             menuItems = document.querySelectorAll(`.prod-popup__list-item`),
             previews = document.querySelectorAll(`.prod-popup__preview`)
 
+
         function close() {
-            fullpage_api.setAllowScrolling(true);
+            canScrolling(true)
             popup.classList.remove(`active`);
             trigger.classList.remove(`active`);
 
@@ -47,7 +68,7 @@ export default function header() {
         closeBtn.addEventListener(`click`, close);
 
         trigger.addEventListener(`click`, e => {
-            fullpage_api.setAllowScrolling(false);
+            canScrolling(false);
             trigger.classList.add('active')
             popup.classList.add(`active`)
         })
@@ -70,14 +91,14 @@ export default function header() {
             closeBtn = document.querySelector(`.menu-popup__close`);
 
         function close() {
-            fullpage_api.setAllowScrolling(true);
+            canScrolling(true)
             popup.classList.remove(`active`);
             btn.classList.remove(`active`);
 
         };
 
         btn.addEventListener(`click`, e => {
-            fullpage_api.setAllowScrolling(false);
+            canScrolling(false)
             btn.classList.add('active')
             popup.classList.add('active')
         })

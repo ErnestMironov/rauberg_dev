@@ -68,6 +68,14 @@
             height: 50vw;
             transform: scale(3);
             z-index: 1;
+
+            @include mobile {
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                left: 0;
+                top: 0;
+            }
         }
 
         &:nth-child(6) {
@@ -177,6 +185,10 @@
     text-transform: uppercase;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
 
+    @include mobile {
+        font-size: 20px;
+    }
+
     &.active {
         visibility: visible;
 
@@ -202,6 +214,10 @@
         transition: all linear .18s;
         display: flex;
         align-items: center;
+
+        @include mobile {
+            position: static;
+        }
 
         span {
             margin-right: 10px;
@@ -230,6 +246,18 @@
         align-items: center;
         transform: translateY(-110%);
         transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @include mobile {
+            padding: 40px 20px 20px;
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__list {
+        @include mobile {
+            margin-top: 30px;
+        }
     }
 
     &__list-item {
@@ -241,6 +269,10 @@
             display: inline-block;
             margin-right: 10px;
             font-size: 18px;
+
+            @include mobile {
+                font-size: 14px;
+            }
         }
 
         &:hover {
@@ -258,6 +290,10 @@
     &__right {
         opacity: 0;
         transform: translateY(100%);
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__preview {

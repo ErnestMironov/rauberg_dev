@@ -18,6 +18,13 @@
         @include mobile {
             position: fixed;
             padding: 0;
+
+            .header__search-box.active {
+                top: 60px;
+                background-color: $dark;
+                color: #fff;
+                padding-bottom: 20px;
+            }
         }
     }
 
@@ -59,6 +66,16 @@
 
     &__search-box {
         margin-right: 33px;
+        transition: .2s linear;
+
+        @include mobile {
+            &.active {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+            }
+        }
     }
 
     &__contacts {
