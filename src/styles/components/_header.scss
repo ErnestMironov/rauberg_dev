@@ -80,7 +80,7 @@
 
     &__contacts {
         margin-right: 34px;
-        color: #EBECF5;
+        color: $grey_soft;
 
         @include mobile {
             display: none;

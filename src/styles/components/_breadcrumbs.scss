@@ -1,0 +1,31 @@
+.breadcrumbs {
+    color: $grey_soft;
+    font-size: 16px;
+    line-height: 16px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        margin-right: 11px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+            transition: all 0.15s linear;
+
+            &:hover {
+                text-shadow: 0 0 3px white;
+            }
+
+            &:after {
+                content: '/';
+                display: inline-block;
+                margin-left: 11px;
+                color: $gold;
+            }
+        }
+    }
+}

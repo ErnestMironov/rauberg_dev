@@ -1,0 +1,94 @@
+.categories {
+
+    @include mobile {
+        padding-top: 100px;
+    }
+
+    .fp-tableCell {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 149px;
+    }
+
+    &__wrap {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 42px;
+        width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 38px;
+        text-transform: uppercase;
+    }
+
+    &__main {
+        margin-top: 32px;
+        display: flex;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &__info {
+        width: 22%;
+        margin-right: 55px;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        margin: auto;
+        display: block;
+
+        path {
+            stroke-dasharray: 80;
+            animation: dashMove 10s linear alternate infinite;
+
+        }
+    }
+
+    &__desc {
+        font-size: 15px;
+        line-height: 20px;
+        color: #A1A6B1;
+        margin-top: 25px;
+    }
+
+    &__slider {
+        width: calc(78% - 55px);
+
+        @include mobile {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .swiper-slide {
+            display: inline-block;
+            max-width: 390px;
+        }
+    }
+}
+
+@keyframes dashMove {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 450;
+    }
+}

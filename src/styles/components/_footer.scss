@@ -37,7 +37,7 @@
         font-size: 15px;
         line-height: 25px;
         letter-spacing: 1px;
-        color: #EBECF5;
+        color: $grey_soft;
 
         @include container {
             max-width: 20vw;
@@ -99,7 +99,7 @@
         a {
             font-size: 18px;
             line-height: 21px;
-            color: #EBECF5;
+            color: $grey_soft;
             text-decoration: none;
         }
     }

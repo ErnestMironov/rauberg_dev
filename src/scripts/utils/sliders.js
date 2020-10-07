@@ -6,7 +6,6 @@ import Swiper, {
     EffectFade
 } from 'swiper';
 // import Swiper styles
-import 'swiper/swiper-bundle.css';
 
 // configure Swiper to use modules
 Swiper.use([Pagination, Navigation, Autoplay, Scrollbar, EffectFade]);
@@ -50,6 +49,22 @@ export default function sliders() {
                 spaceBetween: 10,
                 slidesOffsetBefore: 0,
                 slidesOffsetAfter: 0,
+            }
+        }
+    });
+    const categoriesSlider = new Swiper(`.categories__slider .swiper-container`, {
+        slidesPerView: 1,
+        grabCursor: `true`,
+        slideToClickedSlide: `true`,
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            640: {
+                spaceBetween: 10,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+                slidesPerView: 3,
             }
         }
     });

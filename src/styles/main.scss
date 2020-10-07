@@ -1,10 +1,12 @@
 @import 'common/_reset.scss';
+@import 'common/_swiper-bundle.scss';
 @import 'common/_variables.scss';
 @import 'common/_base.scss';
 
 @import 'components/_btn.scss';
 @import 'components/_burger.scss';
-@import 'components/search-box.scss';
+@import 'components/_search-box.scss';
+@import 'components/_breadcrumbs.scss';
 @import 'components/_menu.scss';
 @import 'components/_products.scss';
 @import 'components/_header.scss';
@@ -14,3 +16,4 @@
 @import 'components/_main-slider.scss';
 @import 'components/_new.scss';
 @import 'components/_footer.scss';
+@import 'components/_categories.scss';
