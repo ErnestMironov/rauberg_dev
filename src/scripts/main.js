@@ -13,7 +13,7 @@ header();
 
 (function () {
 	const header = document.querySelector(`.header`);
-	if (screen.width > 1000) {
+	if (screen.width > 1000 && document.querySelector(`#fullpage`)) {
 		const fullPage = document.querySelector(`#fullpage`);
 		new fullpage('#fullpage', {
 			// paddingTop: `60px`,

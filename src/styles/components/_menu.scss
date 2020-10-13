@@ -35,7 +35,7 @@
     text-align: right;
     text-transform: uppercase;
     visibility: hidden;
-    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) .2s;
     opacity: 0;
     cursor: pointer;
 
@@ -58,7 +58,7 @@
         display: inline-flex;
         flex-direction: column;
         justify-content: space-between;
-        transition: 0.4s ease-out 0.4s;
+        transition: 0.25s ease-out .1s;
         transform: translateX(100%);
         cursor: default;
 

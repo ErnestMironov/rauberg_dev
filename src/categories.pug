@@ -3,7 +3,7 @@ html(lang="ru")
     include pug/head.pug
     body
         include pug/header.pug
-        div(id="fullpage") 
+        div(id="nofullpage") 
             .categories.section.container
                 .breadcrumbs
                     ul.breadcrumbs__list
@@ -12,35 +12,30 @@ html(lang="ru")
                         li.breadcrumbs__list-item  
                             | Главная
                 .categories__wrap
-                    .categories__header
-                        h2.categories__title мясорубки
-                        select.categories__select
-                            option(value="по популярности") по популярности
-                            option(value="по популярности") по популярности
-                    .categories__main
-                        .categories__info
-                            img(src="images/catalog/freshMeat.svg" alt="Мясорубки").categories__img.svg
-                            p.categories__desc Мясору́бка — механическое или электромеханическое приспособление для изготовления мясного фарша и измельчения других видов продуктов. Также используется для изготовления лапши, спагетти, печенья, 
-                                |сока из мягких фруктов и овощей. Аналогичное устройство, применяемое в пищевой промышленности, называется волчок[1].
-                                |Мясорубка была изобретена в XIX веке бароном Карлом Дрезом[2].
-                        .categories__slider
-                            .swiper-container
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
-                                    .swiper-slide
-                                        include pug/product-card
+                    .categories__left
+                        .categories__sticky-wrap
+                            .categories__header
+                                h2.categories__title мясорубки
+                            .categories__main
+                                .categories__info
+                                    img(src="images/catalog/freshMeat.svg" alt="Мясорубки").categories__img.svg
+                                    p.categories__desc Мясору́бка — механическое или электромеханическое приспособление для изготовления мясного фарша и измельчения других видов продуктов. Также используется для изготовления лапши, спагетти, печенья, 
+                                        |сока из мягких фруктов и овощей. Аналогичное устройство, применяемое в пищевой промышленности, называется волчок[1].
+                                        |Мясорубка была изобретена в XIX веке бароном Карлом Дрезом[2].
+                    .categories__right
+                        .categories__header
+                            select.categories__select
+                                option(value="по популярности") по популярности
+                                option(value="по популярности") по популярности
+                        .categories__main
+                            .categories__grid
+                                include pug/product-card
+                                include pug/product-card
+                                include pug/product-card
+                                include pug/product-card
+                                include pug/product-card
+                                include pug/product-card
+                                include pug/product-card
+                                include pug/product-card
             include pug/new.pug 
             include pug/footer.pug 

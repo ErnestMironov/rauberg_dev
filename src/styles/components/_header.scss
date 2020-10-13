@@ -14,9 +14,9 @@
     &.fixed {
         background-color: $dark;
         padding: 8px 0;
+        position: fixed;
 
         @include mobile {
-            position: fixed;
             padding: 0;
 
             .header__search-box.active {

@@ -62,8 +62,6 @@ export default function sliders() {
         breakpoints: {
             640: {
                 spaceBetween: 10,
-                slidesOffsetBefore: 0,
-                slidesOffsetAfter: 0,
                 slidesPerView: 3,
             }
         }
