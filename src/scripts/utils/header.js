@@ -1,17 +1,18 @@
 export default function header() {
 
     function canScrolling(bool) {
+        const fullpage = document.querySelector(`.fp-section`)
         if (bool) {
-            if (screen.width < 1023) {
-                document.body.style.overflow = `auto`
-            } else {
+            if (fullpage) {
                 fullpage_api.setAllowScrolling(true);
+            } else {
+                document.body.style.overflow = `auto`
             }
         } else {
-            if (screen.width < 1023) {
-                document.body.style.overflow = `hidden`
-            } else {
+            if (fullpage) {
                 fullpage_api.setAllowScrolling(false);
+            } else {
+                document.body.style.overflow = `hidden`
             }
         }
     }
