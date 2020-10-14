@@ -36,6 +36,7 @@ export default function header() {
 
         searchBox.addEventListener(`click`, e => {
             setTimeout(() => {
+                document.querySelector(`.header`).classList.add(`fixed`)
                 searchBox.classList.add(`active`)
                 wrap.classList.add(`active`)
                 input.focus()

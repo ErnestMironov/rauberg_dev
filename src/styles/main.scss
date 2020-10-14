@@ -1,7 +1,9 @@
 @import 'common/_reset.scss';
-@import 'common/_swiper-bundle.scss';
 @import 'common/_variables.scss';
 @import 'common/_base.scss';
+
+@import 'libs/_swiper-bundle.scss';
+@import 'libs/_choices.scss';
 
 @import 'components/_btn.scss';
 @import 'components/_burger.scss';

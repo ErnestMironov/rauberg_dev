@@ -54,6 +54,10 @@
 		border-radius: 50px;
 		transition: all 500ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
 
+		@include mobile {
+			transition: none;
+		}
+
 		&:focus {
 			outline: none;
 		}

@@ -6,13 +6,42 @@ import pasteSVG from './utils/pasteSvg';
 import sayHello from './utils/sayHello';
 import sliders from './utils/sliders';
 import header from './utils/header';
+import Choices from 'choices.js';
+
 sayHello();
 pasteSVG();
 sliders();
 header();
 
 (function () {
+	const select = document.querySelector('select');
+
+	if (select) {
+		const choices = new Choices(select, {
+			itemSelectText: 'Нажмите для выбора',
+			searchEnabled: false,
+		});
+	}
+}());
+
+(function () {
 	const header = document.querySelector(`.header`);
+	const searchbox = document.querySelector(`.search-box`);
+
+	function searchActive() {
+		if (searchbox.classList.contains("active")) {
+			return true
+		} else {
+			return false
+		}
+	}
+
+	function headerRemoveFixed() {
+		if (!searchActive()) {
+			header.classList.remove(`fixed`)
+		}
+	}
+
 	if (screen.width > 1000 && document.querySelector(`#fullpage`)) {
 		const fullPage = document.querySelector(`#fullpage`);
 		new fullpage('#fullpage', {
@@ -22,7 +51,7 @@ header();
 					if (fullPage.style.transform !== `translate3d(0px, 0px, 0px)`) {
 						header.classList.add(`fixed`)
 					} else {
-						header.classList.remove(`fixed`)
+						headerRemoveFixed();
 					}
 				}, 500);
 			}
@@ -32,7 +61,7 @@ header();
 			if (window.scrollY > 0) {
 				header.classList.add(`fixed`)
 			} else {
-				header.classList.remove(`fixed`)
+				headerRemoveFixed();
 			}
 		})
 	}
