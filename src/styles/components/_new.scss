@@ -122,10 +122,11 @@
         right: 43px;
         z-index: 1;
         transition: ease-out .3s;
-        object-fit: contet;
+        object-fit: contain;
         object-position: center;
-        max-height: 65vh;
+        max-height: 540px;
         max-width: 100%;
+
 
         &_mobile {
             display: none;

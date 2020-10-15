@@ -1,5 +1,6 @@
 .footer {
     background-color: $dark;
+    padding-top: 43px;
 
     @include mobile {
         margin-top: 40px;
@@ -7,7 +8,7 @@
     }
 
     &.section .fp-tableCell {
-        padding-top: 43px;
+        padding-top: 0;
     }
 
     &__top {

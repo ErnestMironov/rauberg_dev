@@ -45,21 +45,7 @@
     }
 
     &.active .products-trigger__square span {
-        &:nth-child(1) {
-            transform: translate(5px, 5px);
-        }
-
-        &:nth-child(2) {
-            transform: translateY(5px);
-        }
-
-        &:nth-child(3) {
-            transform: translate(-5px, 5px);
-        }
-
-        &:nth-child(4) {
-            transform: translateX(5px);
-        }
+        opacity: 0;
 
         &:nth-child(5) {
             transition: all ease-in-out 1s;
@@ -68,6 +54,7 @@
             height: 50vw;
             transform: scale(3);
             z-index: 1;
+            opacity: 1;
 
             @include mobile {
                 width: 100vw;
@@ -76,22 +63,6 @@
                 left: 0;
                 top: 0;
             }
-        }
-
-        &:nth-child(6) {
-            transform: translateX(-5px);
-        }
-
-        &:nth-child(7) {
-            transform: translate(5px, -5px);
-        }
-
-        &:nth-child(8) {
-            transform: translateY(-5px);
-        }
-
-        &:nth-child(9) {
-            transform: translate(-5px, -5px);
         }
     }
 

@@ -3,12 +3,13 @@ import Swiper, {
     Navigation,
     Autoplay,
     Scrollbar,
-    EffectFade
+    EffectFade,
+    Thumbs
 } from 'swiper';
 // import Swiper styles
 
 // configure Swiper to use modules
-Swiper.use([Pagination, Navigation, Autoplay, Scrollbar, EffectFade]);
+Swiper.use([Pagination, Navigation, Autoplay, Scrollbar, EffectFade, Thumbs]);
 
 export default function sliders() {
     const mainSlider = new Swiper(`.main-slider`, {
@@ -48,6 +49,7 @@ export default function sliders() {
             640: {
                 spaceBetween: 10,
                 slidesOffsetBefore: 0,
+                slidesPerView: 4,
                 slidesOffsetAfter: 0,
             }
         }
@@ -75,5 +77,15 @@ export default function sliders() {
             el: '.swiper-scrollbar',
             draggable: true,
         },
+    });
+    const pp_slider = new Swiper(`.product-page__slider`, {
+        slidesPerView: `1`,
+        thumbs: {
+            swiper: {
+                el: '.product-page__nav-slider .swiper-container',
+                slidesPerView: 6,
+                centerInsufficientSlides: true
+            }
+        }
     });
 }
