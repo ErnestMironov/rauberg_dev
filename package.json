@@ -17,7 +17,8 @@
     "postcss": "^8.0.6",
     "pug": "^3.0.0",
     "sass": "^1.26.8",
-    "swiper": "^6.1.1"
+    "swiper": "^6.1.1",
+    "tabs": "^0.2.0"
   },
   "scripts": {
     "clean": "rm dist",

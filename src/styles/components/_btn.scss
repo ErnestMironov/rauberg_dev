@@ -12,6 +12,7 @@
     transition: all .2s linear;
     display: inline-block;
     cursor: pointer;
+    font: 400 16px Play;
 
     &:hover {
         background-color: $grey_light;

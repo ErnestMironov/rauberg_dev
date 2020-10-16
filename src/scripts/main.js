@@ -6,12 +6,14 @@ import pasteSVG from './utils/pasteSvg';
 import sayHello from './utils/sayHello';
 import sliders from './utils/sliders';
 import header from './utils/header';
+import product_page from './utils/product-page';
 import Choices from 'choices.js';
 
 sayHello();
 pasteSVG();
 sliders();
 header();
+product_page();
 
 (function () {
 	const select = document.querySelector('select');
@@ -22,6 +24,7 @@ header();
 			searchEnabled: false,
 		});
 	}
+
 }());
 
 (function () {
