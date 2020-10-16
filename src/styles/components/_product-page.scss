@@ -7,7 +7,6 @@
 
     &__sticky-wrap {
         width: 50%;
-        padding-top: 209px;
 
         @include mobile {
             width: 100%;
@@ -16,7 +15,9 @@
 
     &__slider-wrap {
         position: sticky;
-        top: 100px;
+        padding-top: 209px;
+        top: 0;
+        height: 100vh;
 
         &:after {
             content: '';
@@ -32,22 +33,35 @@
 
     &__slider {
         .swiper-slide {
-            height: 550px;
+            height: calc(100vh - 219px - 50vw / 6);
             display: flex;
             align-items: center;
             justify-content: center;
 
-            picture,
-            img {
-                max-width: 90%;
-                max-height: 90%;
+            picture {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                img {
+                    max-width: 90%;
+                    max-height: 90%;
+                    object-fit: contain;
+                    object-position: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
     }
 
     &__nav-slider {
-        position: relative;
-        margin-top: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
 
         &:after {
             content: '';
