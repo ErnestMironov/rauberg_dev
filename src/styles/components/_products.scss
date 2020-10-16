@@ -226,6 +226,8 @@
     }
 
     &__list {
+        counter-reset: my-awesome-counter;
+
         @include mobile {
             margin-top: 30px;
         }
@@ -234,8 +236,10 @@
     &__list-item {
         margin-bottom: 20px;
         transition: linear .18s;
+        counter-increment: my-awesome-counter;
 
-        span {
+        a:before {
+            content: "0"counter(my-awesome-counter);
             transform: rotate(-90deg);
             display: inline-block;
             margin-right: 10px;
