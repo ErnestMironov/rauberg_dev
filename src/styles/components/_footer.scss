@@ -86,10 +86,12 @@
 
     &__list {
         margin-top: 12px;
+        counter-reset: my-awesome-counter;
     }
 
     &__list-item {
         margin-bottom: 4px;
+        counter-increment: my-awesome-counter;
 
         &:hover {
             .footer__list-item-txt {
@@ -102,16 +104,16 @@
             line-height: 21px;
             color: $grey_soft;
             text-decoration: none;
+
+            &::before {
+                content: "0"counter(my-awesome-counter);
+                font-size: 10px;
+                line-height: 16px;
+                color: $gold;
+                margin-right: 5px;
+                display: inline-block;
+            }
         }
-    }
-
-
-    &__list-number {
-        font-size: 10px;
-        line-height: 16px;
-        color: $gold;
-        margin-right: 5px;
-        display: inline-block;
     }
 
     &__list-item-txt {
