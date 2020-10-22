@@ -327,18 +327,6 @@
         transition: cubic-bezier(0.74, 0.18, 0.26, 0.85) 0.2s;
         margin-right: 5px;
 
-        &:last-child {
-            margin-right: 0;
-            width: 100px;
-            font-size: 15px;
-            line-height: 17px;
-            color: $gold;
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: none;
-            flex: 0 0 100px;
-        }
-
         img,
         svg {
             max-width: 90%;

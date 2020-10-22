@@ -59,7 +59,41 @@ html(lang="ru")
                     .product-page__buy-box
                         .product-page__price 8 888
                         .product-page__btn-wrap
-                            btn.product-page__one-click-btn.btn купить в один клик
+                            btn.product-page__one-click-btn.btn.modal-open(aria-controls="one-click") купить в один клик
+                            .modal#one-click
+                                form.modal__window(aria-labelledby="modal-title")
+                                    button.modal__close
+                                    .modal__left
+                                        .modal__left-main   
+                                            .product-page__code Артикул:11917
+                                            picture.modal__img 
+                                                source(type="image/webp" srcset="images/products/meat/1.webp")
+                                                img(src="images/products/meat/1.png", alt="desc")
+                                            h2.product-page__title Мясорубка Rauberg 
+                                                span.product-page__title-color RMG-041
+                                        .modal__left-footer
+                                            .product-page__price 8 888
+                                            .modal__counter
+                                                .slider-nav
+                                                    .slider-nav__arrow.slider-nav__arrow_up
+                                                        img(src="images/icons/angle_up.svg" alt="Предыдущий слайд")
+                                                    .slider-nav__separator
+                                                    .slider-nav__arrow.slider-nav__arrow_down
+                                                        img(src="images/icons/angle_down.svg" alt="Следующий слайд")
+                                                .swiper-container
+                                                    .swiper-wrapper
+                                                        .swiper-slide 1
+                                                        .swiper-slide 2
+                                                        .swiper-slide 3
+                                                .modal__counter-txt шт
+                                    .modal__right
+                                        h3.modal__order-title ЗАКАз в один клик
+                                        input.modal__input(type="text" placeholder="имя")
+                                        input.modal__input(type="tel" placeholder="ТЕЛЕФОН")
+                                        input.modal__input(type="mail" placeholder="EMAIL")
+                                        .modal__textarea-wrap
+                                            textarea.modal__textarea(placeholder="сообщение")
+                                        button.btn.modal__submit отправить
                             btn.product-page__buy-btn.btn купить 
                     .product-page__recommendation Рекомендована інтернет ціна
                     .product-page__controls
@@ -75,8 +109,6 @@ html(lang="ru")
                             a(href="https://www.voxmax.ru" target="_blank" rel="nofollow" class="product-page__shops-item")
                                 img.svg(src="images/markets/voxmax.svg" alt="voxmax")
                                 img.svg(src="images/markets/voxmax.svg" alt="voxmax")
-                            a(href="javascript:;" target="_blank" rel="nofollow" class="product-page__shops-item")
-                                |Все магазины
                     .tab-container
                         .product-page__tabs.tabs-list
                                 span.product-page__tabs-link.tab.active Характеристики

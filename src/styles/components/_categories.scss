@@ -55,10 +55,14 @@
         margin: auto;
         display: block;
 
-        path {
+        path,
+        line,
+        rect,
+        circle {
             stroke-dasharray: 80;
-            animation: dashMove 10s linear alternate infinite;
-
+            animation: dashMove 13s linear alternate infinite;
+            stroke: #C5C6D1;
+            fill: none;
         }
     }
 

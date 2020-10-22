@@ -43,9 +43,6 @@
     }
 
     &__navigation {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
         position: absolute;
         top: 50%;
         right: 0;
@@ -60,32 +57,6 @@
         }
     }
 
-    &__separator {
-        width: 30px;
-        height: 1px;
-        background-color: $gold;
-    }
-
-    &__arrow {
-        transition: linear .2s;
-        cursor: pointer;
-
-        &_up {
-            padding-bottom: 15px;
-
-            &:hover {
-                transform: translateY(-5px);
-            }
-        }
-
-        &_down {
-            padding-top: 15px;
-
-            &:hover {
-                transform: translateY(5px);
-            }
-        }
-    }
 
     .swiper-slide {
 

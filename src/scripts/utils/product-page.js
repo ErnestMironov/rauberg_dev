@@ -1,8 +1,18 @@
 import $ from 'jquery';
 import tabs from 'tabs';
+import Frdialogmodal from 'fr-dialogmodal';
+import 'fr-dialogmodal/dialogmodal.css';
 
 export default function () {
-    var container = document.querySelector('.tab-container')
+    var container = document.querySelector('.tab-container');
+    var myModal = Frdialogmodal({
+        selector: '.modal',
+        modalSelector: '.modal__window',
+        openSelector: '.modal-open',
+        closeSelector: '.modal__close',
+        readyClass: 'modal--is-ready',
+        activeClass: 'modal--is-active'
+    });
     if (container) {
         $(".js-add-review").on("click", function () {
             $("html, body").animate({

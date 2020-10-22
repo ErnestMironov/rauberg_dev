@@ -4,7 +4,45 @@ html(lang="ru")
     body
         include pug/header.pug
         div(id="fullpage")
-            include pug/main-slider.pug 
+            div(class="section")
+                .main-slider.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            img.main-slider__img(src="images/mainSlider/1.jpg" alt="Мясорубка")
+                            .container
+                                .main-slider__txt-wrap
+                                    h2.main-slider__title мечты близко
+                                    div.main-slider__desc Самый лучший помощник на кухне ваш верный друг - мясорубка
+                                    .main-slider__product-name Rauberg 
+                                        span.main-slider__product-name_color RMG-041
+                                    a(href="javascript:;").main-slider__link перейти
+                        .swiper-slide
+                            img.main-slider__img(src="images/mainSlider/2.jpg" alt="Вертикальный пылесос")
+                            .container
+                                .main-slider__txt-wrap
+                                    h2.main-slider__title мечты близко
+                                    div.main-slider__desc Самый лучший помощник на кухне ваш верный друг - мясорубка
+                                    .main-slider__product-name Rauberg 
+                                        span.main-slider__product-name_color RMG-041
+                                    a(href="javascript:;").main-slider__link перейти
+                        .swiper-slide
+                            img.main-slider__img(src="images/mainSlider/3.jpg" alt="Соковыжималка")
+                            .container
+                                .main-slider__txt-wrap
+                                    h2.main-slider__title мечты близко
+                                    div.main-slider__desc Самый лучший помощник на кухне ваш верный друг - мясорубка
+                                    .main-slider__product-name Rauberg 
+                                        span.main-slider__product-name_color RMG-041
+                                    a(href="javascript:;").main-slider__link перейти
+                    .main-slider__elements
+                        .container  
+                            .main-slider__pag.slider-pag
+                            .slider-nav.main-slider__navigation 
+                                .slider-nav__arrow.slider-nav__arrow_up
+                                    img(src="images/icons/angle_up.svg" alt="Предыдущий слайд")
+                                .slider-nav__separator
+                                .slider-nav__arrow.slider-nav__arrow_down
+                                    img(src="images/icons/angle_down.svg" alt="Следующий слайд")
             include pug/catalog.pug 
             include pug/popular.pug 
             include pug/new.pug 
