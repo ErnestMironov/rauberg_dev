@@ -1,20 +1,18 @@
 .popular {
+    margin-top: 43px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
     @include mobile {
         margin-top: 60px;
     }
 
-    .fp-tableCell {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
 
     &__slider.swiper-container {
         max-width: 100%;
         padding-top: 6px;
-        padding-bottom: 40px;
         margin-top: 22px;
 
         @include mobile {
@@ -24,7 +22,6 @@
         }
 
         .swiper-slide {
-            max-width: 390px;
             display: inline-block;
             width: auto;
 
@@ -37,11 +34,18 @@
 
 
         .popular__slider-pag {
-            margin-top: 5px;
+            margin-top: 18px;
 
             @include mobile {
                 margin-top: 20px;
             }
         }
+    }
+}
+
+.fp-tableCell {
+    .popular {
+        margin-top: 0;
+        min-height: 100%;
     }
 }

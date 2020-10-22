@@ -1,16 +1,15 @@
 .new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 145px;
+
     &.container {
         padding: 0px 50px;
     }
 
     @include mobile {
         margin-top: 20px;
-    }
-
-    .fp-tableCell {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
     &__left {
@@ -144,5 +143,12 @@
             position: static;
             margin-top: 20px;
         }
+    }
+}
+
+.fp-tableCell {
+    .new {
+        margin-top: 0;
+        height: 100%;
     }
 }

@@ -153,7 +153,11 @@
         margin-bottom: 46px;
     }
 
-    &__input,
+    &__input {
+        position: relative;
+    }
+
+    &__input input,
     &__textarea {
         width: 100%;
         margin-bottom: 22px;
@@ -168,6 +172,45 @@
             text-transform: uppercase;
             color: #56575C;
         }
+    }
+
+    &__input input {
+        &:not(:placeholder-shown) {
+            &:invalid {
+                border-bottom: 1px solid red;
+
+                &~.modal__input-not-complete {
+                    display: block;
+                }
+            }
+
+            &:valid {
+                border-bottom: 1px solid green;
+
+                &~.modal__input-complete {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+    &__input-complete,
+    &__input-not-complete {
+        position: absolute;
+        right: 0;
+        font-size: 15px;
+        line-height: 38px;
+        top: 0;
+        display: none;
+    }
+
+    &__input-complete {
+        color: green;
+    }
+
+    &__input-not-complete {
+        color: red;
     }
 
     &__textarea {

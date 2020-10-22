@@ -15,6 +15,7 @@ sliders();
 header();
 product_page();
 
+
 (function () {
 	const select = document.querySelector('select');
 
@@ -45,7 +46,7 @@ product_page();
 		}
 	}
 
-	if (screen.width > 1000 && document.querySelector(`#fullpage`)) {
+	if (window.innerWidth > 1000 && window.innerHeight > 650 && document.querySelector(`#fullpage`)) {
 		const fullPage = document.querySelector(`#fullpage`);
 		new fullpage('#fullpage', {
 			// paddingTop: `60px`,

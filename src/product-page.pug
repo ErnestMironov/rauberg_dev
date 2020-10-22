@@ -88,11 +88,20 @@ html(lang="ru")
                                                 .modal__counter-txt шт
                                     .modal__right
                                         h3.modal__order-title ЗАКАз в один клик
-                                        input.modal__input(type="text" placeholder="имя")
-                                        input.modal__input(type="tel" placeholder="ТЕЛЕФОН")
-                                        input.modal__input(type="mail" placeholder="EMAIL")
+                                        label.modal__input
+                                            input(type="text" name="name" placeholder="имя" required minlength="2" autocomplete="name")
+                                            span.modal__input-complete &#128504;
+                                            span.modal__input-not-complete &#10761;
+                                        label.modal__input
+                                            input(type="tel" name="phone" placeholder="ТЕЛЕФОН" required autocomplete="tel")
+                                            span.modal__input-complete &#128504;
+                                            span.modal__input-not-complete &#10761;
+                                        label.modal__input
+                                            input(type="email" name="email" placeholder="EMAIL" autocomplete="email")
+                                            span.modal__input-complete &#128504;
+                                            span.modal__input-not-complete &#10761;
                                         .modal__textarea-wrap
-                                            textarea.modal__textarea(placeholder="сообщение")
+                                            textarea.modal__textarea(placeholder="сообщение" name="message")
                                         button.btn.modal__submit отправить
                             btn.product-page__buy-btn.btn купить 
                     .product-page__recommendation Рекомендована інтернет ціна

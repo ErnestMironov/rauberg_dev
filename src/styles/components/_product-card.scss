@@ -59,14 +59,18 @@
         font-size: 13px;
         line-height: 15px;
         color: #97A1B8;
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__dotted {
-        flex: auto;
         border-bottom: 1px dotted $gold;
         position: relative;
         bottom: 3px;
         margin: 0 4px;
+        flex: 1 10px;
     }
 
     &__char-val {
@@ -74,6 +78,7 @@
         line-height: 16px;
         text-align: right;
         color: #BBC3D5;
+        max-width: 35%;
     }
 
     &__price {

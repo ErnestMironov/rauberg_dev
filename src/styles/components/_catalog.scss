@@ -1,12 +1,10 @@
 .catalog {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 750px;
+
     @include tablet {
         padding: 0 25px;
-    }
-
-    .fp-tableCell {
-        display: flex;
-        justify-content: flex-end;
-
     }
 
     &__title-wrap {
@@ -24,6 +22,7 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(30%, 440px));
+        width: 70%;
 
         @include tablet {
             margin-top: 30px;
@@ -44,6 +43,8 @@
         padding: 23px;
         cursor: pointer;
         transition: all .3s linear;
+        text-decoration: none;
+        color: #fff;
 
         @include tablet {
             max-width: 100%;
@@ -211,5 +212,11 @@
         .swiper-scrollbar-drag {
             background: $gold;
         }
+    }
+}
+
+.fp-tableCell {
+    .catalog {
+        min-height: 100%;
     }
 }

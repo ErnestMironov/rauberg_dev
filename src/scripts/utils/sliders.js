@@ -35,7 +35,6 @@ export default function sliders() {
         slidesOffsetBefore: 20,
         slidesOffsetAfter: 20,
         spaceBetween: 22,
-        grabCursor: `true`,
         slideToClickedSlide: `true`,
         autoplay: {
             delay: 3000,
@@ -49,8 +48,14 @@ export default function sliders() {
             640: {
                 spaceBetween: 10,
                 slidesOffsetBefore: 0,
-                slidesPerView: 4,
+                slidesPerView: 2,
                 slidesOffsetAfter: 0,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1500: {
+                slidesPerView: 4,
             }
         }
     });

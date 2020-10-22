@@ -43,7 +43,10 @@ html(lang="ru")
                                 .slider-nav__separator
                                 .slider-nav__arrow.slider-nav__arrow_down
                                     img(src="images/icons/angle_down.svg" alt="Следующий слайд")
-            include pug/catalog.pug 
-            include pug/popular.pug 
-            include pug/new.pug 
+            .section
+                include pug/catalog.pug 
+            .section  
+                include pug/popular.pug 
+            .section
+                include pug/new.pug
             include pug/footer.pug 
