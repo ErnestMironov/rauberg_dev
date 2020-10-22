@@ -1,5 +1,6 @@
 .modal {
     background-color: rgba(19, 19, 19, 0.568);
+    visibility: hidden;
 
     &--is-ready {
         height: 100%;
@@ -195,5 +196,18 @@
         &:after {
             top: 76px;
         }
+    }
+
+    &__submit {
+        border-radius: 4px;
+        background-color: $gold;
+        border: 0;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        display: inline-block;
+        margin: auto;
+        padding: 13px 21px;
+        width: auto;
     }
 }

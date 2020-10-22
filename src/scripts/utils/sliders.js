@@ -90,33 +90,35 @@ export default function sliders() {
     });
 
     (() => {
-        let appendSlide = 3;
-        let prevArrow = document.querySelector(`.modal__left-footer .slider-nav__arrow_down`);
-        let priceSelector = document.querySelector(`.modal .product-page__price`);
-        let price = document.querySelector(`.modal .product-page__price`).textContent;
-        price = parseInt(String(price).replace(/ /g, ''))
+        if (document.querySelector(`.modal`)) {
+            let appendSlide = 3;
+            let prevArrow = document.querySelector(`.modal__left-footer .slider-nav__arrow_down`);
+            let priceSelector = document.querySelector(`.modal .product-page__price`);
+            let price = document.querySelector(`.modal .product-page__price`).textContent;
+            price = parseInt(String(price).replace(/ /g, ''))
 
-        const modalCountSlider = new Swiper(`.modal__left-footer .swiper-container`, {
-            slidesPerView: 1,
-            direction: `vertical`,
-            centeredSlides: `true`,
-            navigation: {
-                nextEl: '.modal__left-footer .slider-nav__arrow_up',
-                prevEl: '.modal__left-footer .slider-nav__arrow_down',
-            },
-            on: {
-                slideChange: function () {
-                    this.appendSlide(`<div class="swiper-slide">${++appendSlide}</div>`)
+            const modalCountSlider = new Swiper(`.modal__left-footer .swiper-container`, {
+                slidesPerView: 1,
+                direction: `vertical`,
+                centeredSlides: `true`,
+                navigation: {
+                    nextEl: '.modal__left-footer .slider-nav__arrow_up',
+                    prevEl: '.modal__left-footer .slider-nav__arrow_down',
+                },
+                on: {
+                    slideChange: function () {
+                        this.appendSlide(`<div class="swiper-slide">${++appendSlide}</div>`)
 
-                    if (this.realIndex == 0) {
-                        prevArrow.style.visibility = `hidden`
-                    } else {
-                        prevArrow.style.visibility = `visible`
+                        if (this.realIndex == 0) {
+                            prevArrow.style.visibility = `hidden`
+                        } else {
+                            prevArrow.style.visibility = `visible`
+                        }
+
+                        priceSelector.textContent = (price * ++this.realIndex).toLocaleString('ru')
                     }
-
-                    priceSelector.textContent = (price * ++this.realIndex).toLocaleString('ru')
                 }
-            }
-        })
+            })
+        }
     })()
 }
