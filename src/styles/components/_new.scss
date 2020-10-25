@@ -5,7 +5,7 @@
     margin-top: 145px;
 
     &.container {
-        padding: 0px 50px;
+        padding: 0 50px;
     }
 
     @include mobile {
@@ -41,7 +41,7 @@
         line-height: 44px;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-top: 20px;
 
         @include mobile {
@@ -96,14 +96,14 @@
             }
         }
 
-        &:after,
-        &:before {
-            content: '';
+        &::after,
+        &::before {
+            content: "";
             position: absolute;
             display: inline-block;
         }
 
-        &:after {
+        &::after {
             top: 1px;
             right: 1px;
             border: 1px solid $gold;
@@ -111,7 +111,7 @@
             width: 99%;
         }
 
-        &:before {
+        &::before {
             top: 0;
             right: 0;
             height: calc(100% + 45px);
@@ -124,7 +124,7 @@
         top: 43px;
         right: 43px;
         z-index: 1;
-        transition: ease-out .3s;
+        transition: ease-out 0.3s;
         object-fit: contain;
         object-position: center;
         max-height: 540px;

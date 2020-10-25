@@ -4,13 +4,13 @@ export default function header() {
         const fullpage = document.querySelector(`.fp-section`)
         if (bool) {
             if (fullpage) {
-                fullpage_api.setAllowScrolling(true);
+                fullpage_api.setAllowScrolling(true)
             } else {
                 document.body.style.overflow = `auto`
             }
         } else {
             if (fullpage) {
-                fullpage_api.setAllowScrolling(false);
+                fullpage_api.setAllowScrolling(false)
             } else {
                 document.body.style.overflow = `hidden`
             }
@@ -18,24 +18,24 @@ export default function header() {
     }
 
     (function () {
-        const searchBox = document.querySelector('.search-box'),
-            wrap = document.querySelector('.header__search-box'),
-            input = document.querySelector('.search-box input'),
-            closeBtn = document.querySelector('.search-box__close');
+        const searchBox = document.querySelector(`.search-box`)
+        const wrap = document.querySelector(`.header__search-box`)
+        const input = document.querySelector(`.search-box input`)
+        const closeBtn = document.querySelector(`.search-box__close`)
 
         function close() {
             setTimeout(() => {
                 if (searchBox.classList.contains(`active`)) {
-                    searchBox.classList.remove(`active`);
-                    wrap.classList.remove(`active`);
-                    input.value = ``;
-                    input.blur();
+                    searchBox.classList.remove(`active`)
+                    wrap.classList.remove(`active`)
+                    input.value = ``
+                    input.blur()
                     closeBtn.removeEventListener(`click`, close)
                 }
             }, 200)
-        };
+        }
 
-        searchBox.addEventListener(`click`, e => {
+        searchBox.addEventListener(`click`, (e) => {
             setTimeout(() => {
                 document.querySelector(`.header`).classList.add(`fixed`)
                 searchBox.classList.add(`active`)
@@ -43,73 +43,73 @@ export default function header() {
                 input.focus()
                 closeBtn.addEventListener(`click`, close)
             })
-        });
+        })
 
-        document.addEventListener(`click`, e => {
+        document.addEventListener(`click`, (e) => {
             if (!searchBox.contains(e.target)) {
-                close();
+                close()
             }
         })
     }());
 
     (function () {
-        const trigger = document.querySelector(`.products-trigger`),
-            popup = document.querySelector(`.prod-popup`),
-            closeBtn = document.querySelector(`.prod-popup__close`),
-            menuItems = document.querySelectorAll(`.prod-popup__list-item`),
-            previews = document.querySelectorAll(`.prod-popup__preview`)
+        const trigger = document.querySelector(`.products-trigger`)
+        const popup = document.querySelector(`.prod-popup`)
+        const closeBtn = document.querySelector(`.prod-popup__close`)
+        const menuItems = document.querySelectorAll(`.prod-popup__list-item`)
+        const previews = document.querySelectorAll(`.prod-popup__preview`)
 
 
         function close() {
             canScrolling(true)
-            popup.classList.remove(`active`);
-            trigger.classList.remove(`active`);
+            popup.classList.remove(`active`)
+            trigger.classList.remove(`active`)
 
-        };
+        }
 
-        closeBtn.addEventListener(`click`, close);
+        closeBtn.addEventListener(`click`, close)
 
-        trigger.addEventListener(`click`, e => {
-            canScrolling(false);
-            trigger.classList.add('active')
+        trigger.addEventListener(`click`, (e) => {
+            canScrolling(false)
+            trigger.classList.add(`active`)
             popup.classList.add(`active`)
         })
 
-        menuItems.forEach(element => {
+        menuItems.forEach((element) => {
             element.addEventListener(`mouseenter`, () => {
-                const preview = element.getAttribute(`data-prod-title`);
+                const preview = element.getAttribute(`data-prod-title`)
 
-                previews.forEach(element => {
+                previews.forEach((element) => {
                     element.classList.remove(`active`)
-                });
-                document.querySelector(`[data-prod-preview="${preview}"]`).classList.add(`active`);
+                })
+                document.querySelector(`[data-prod-preview="${preview}"]`).classList.add(`active`)
             })
         })
     }());
 
     (function () {
-        const btn = document.querySelector(`.burger`),
-            popup = document.querySelector(`.menu-popup`),
-            closeBtn = document.querySelector(`.menu-popup__close`);
+        const btn = document.querySelector(`.burger`)
+        const popup = document.querySelector(`.menu-popup`)
+        const closeBtn = document.querySelector(`.menu-popup__close`)
 
         function close() {
             canScrolling(true)
-            popup.classList.remove(`active`);
-            btn.classList.remove(`active`);
+            popup.classList.remove(`active`)
+            btn.classList.remove(`active`)
 
-        };
+        }
 
-        btn.addEventListener(`click`, e => {
+        btn.addEventListener(`click`, (e) => {
             canScrolling(false)
-            btn.classList.add('active')
-            popup.classList.add('active')
+            btn.classList.add(`active`)
+            popup.classList.add(`active`)
         })
 
         closeBtn.addEventListener(`click`, close)
 
-        popup.addEventListener(`click`, e => {
+        popup.addEventListener(`click`, (e) => {
             if (popup === e.target) {
-                close();
+                close()
             }
         })
     }())

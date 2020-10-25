@@ -16,7 +16,7 @@
         margin-left: 5px;
         background-color: white;
         margin-bottom: 7px;
-        transition: all ease-in-out .2s;
+        transition: all ease-in-out 0.2s;
         border-radius: 1px;
         display: block;
         position: relative;
@@ -35,10 +35,11 @@
         span {
             background-color: $gold;
         }
+
         @include mobile {
             span:nth-child(1) {
                 transform-origin: left;
-                animation: burger-top .4s ease-in-out forwards;
+                animation: burger-top 0.4s ease-in-out forwards;
                 transform-origin: center;
             }
 
@@ -48,7 +49,7 @@
 
             span:nth-child(3) {
                 transform-origin: left;
-                animation: burger-bottom .4s ease-in-out forwards;
+                animation: burger-bottom 0.4s ease-in-out forwards;
                 transform-origin: center;
             }
         }

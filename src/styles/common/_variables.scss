@@ -1,10 +1,10 @@
 //--------COLORS-------------
-$blue: #0095EB;
+$blue: #0095eb;
 $grey: #262527;
-$grey_light: #C5C6D1;
-$grey_soft: #EBECF5;
+$grey_light: #c5c6d1;
+$grey_soft: #ebecf5;
 $dark: #181818;
-$gold: #BDA180;
+$gold: #bda180;
 //--------DEVICE SIZE--------
 $small-mobile: 400px;
 $tablet-width: 648px;
@@ -12,32 +12,37 @@ $desktop-width: 1023px;
 $container-width: 1630px;
 
 @mixin small-mobile {
-  @media (max-width: $small-mobile) {
-    @content;
-  }
+
+    @media (max-width: $small-mobile) {
+        @content;
+    }
 }
 
 @mixin mobile {
-  @media (max-width: #{$tablet-width - 1px}) {
-    @content;
-  }
+
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
 }
 
 @mixin tablet {
-  @media (max-width: #{$desktop-width}) {
-    @content;
-  }
+
+    @media (max-width: #{$desktop-width}) {
+        @content;
+    }
 }
 
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width + 1px}) {
-    @content;
-  }
+
+    @media (min-width: #{$desktop-width + 1px}) {
+        @content;
+    }
 }
 
 @mixin container {
-  @media (min-width: #{$desktop-width}) and (max-width: #{$container-width}) {
-    @content;
-  }
+
+    @media (min-width: #{$desktop-width}) and (max-width: #{$container-width}) {
+        @content;
+    }
 }

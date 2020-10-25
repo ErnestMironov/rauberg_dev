@@ -3,20 +3,20 @@
 
     &__row {
         position: relative;
-        margin-bottom: 27px
+        margin-bottom: 27px;
     }
 
     &__row--parent {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
         justify-content: space-between;
     }
 
     @media only screen and (max-width: 767px) {
         &__row--parent {
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap
+            flex-wrap: wrap;
+            flex-wrap: wrap;
         }
     }
 
@@ -32,17 +32,17 @@
     @media only screen and (max-width: 767px) {
         &__cell {
             width: 100%;
-            margin-bottom: 27px
+            margin-bottom: 27px;
         }
 
         &__cell:last-child {
-            margin-bottom: 0
+            margin-bottom: 0;
         }
     }
 
     &__label-box {
         display: block;
-        position: relative
+        position: relative;
     }
 
     &__label {
@@ -50,38 +50,38 @@
         background: $grey;
         padding-left: 5px;
         padding-right: 5px;
-        color: #fff;
+        color: #ffffff;
         font-family: roboto;
         top: -5px;
         left: 10px;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     .popup &__label {
-        background: #12161f
+        background: #12161f;
     }
 
     .career__aside &__label {
-        background: #12161f
+        background: #12161f;
     }
 
     .service__form &__label {
-        background: #12161f
+        background: #12161f;
     }
 
     &__title {
         margin-bottom: 34px;
         font-size: 20px;
-        font-weight: 700
+        font-weight: 700;
     }
 
     &__input-file {
-        display: none
+        display: none;
     }
 
     &__file {
-        margin-bottom: 30px
+        margin-bottom: 30px;
     }
 
     &__file-btn {
@@ -93,9 +93,9 @@
         padding-left: 27px;
         position: relative;
         cursor: pointer;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-        margin-bottom: 20px
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        margin-bottom: 20px;
     }
 
     @media only screen and (min-width: 1025px) {
@@ -110,7 +110,7 @@
     }
 
     &__file-btn::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 50%;
@@ -119,12 +119,12 @@
         height: 2px;
         background: #8b909c;
         border-radius: 2px;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     &__file-btn::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 5px;
@@ -133,8 +133,8 @@
         width: 2px;
         background: #8b909c;
         border-radius: 2px;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     &__file-name {
@@ -142,7 +142,7 @@
         color: #5b5f66;
         max-width: 100%;
         overflow: hidden;
-        text-overflow: ellipsis
+        text-overflow: ellipsis;
     }
 
     &__btn {
@@ -155,8 +155,8 @@
         font-weight: bold;
         font: 700 16px Play;
 
-        &:after {
-            content: '';
+        &::after {
+            content: "";
             display: block;
             height: 100%;
             width: 100%;
@@ -167,17 +167,18 @@
             position: absolute;
             transform: scaleY(0);
             transform-origin: 50% 0;
-            transition-property: transform,
+            transition-property:
+                transform,
                 -webkit-transform;
-            transition-duration: .15s;
+            transition-duration: 0.15s;
             transition-timing-function: ease-out;
         }
 
         &:hover {
             background-color: $dark;
-            color: #fff;
+            color: #ffffff;
 
-            &:after {
+            &::after {
                 top: 0;
                 transform: scaleY(1);
             }
@@ -190,11 +191,11 @@
         outline: 0;
         background: 0 0;
         border: 1px solid #9a9c9e;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
         font-family: roboto;
         font-size: 14px;
-        color: #fff;
+        color: #ffffff;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -204,8 +205,8 @@
         border-color: $blue;
     }
 
-    input:not([type=checkbox]):not([type=radio]):not(.search__input):not(.header__search-input):focus+.form__label,
-    textarea:focus+.form__label {
+    input:not([type=checkbox]):not([type=radio]):not(.search__input):not(.header__search-input):focus + .form__label,
+    textarea:focus + .form__label {
         color: $blue;
     }
 
@@ -215,13 +216,13 @@
     }
 
     input:not([type=checkbox]):not([type=radio]):not(.search__input):not(.header__search-input) {
-        height: 46px
+        height: 46px;
     }
 
     textarea {
         height: 85px;
         resize: none;
         padding-top: 10px;
-        padding-bottom: 10px
+        padding-bottom: 10px;
     }
 }

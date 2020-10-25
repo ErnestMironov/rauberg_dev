@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="ru")
+    include common/head.pug
+    body
+        include common/header.pug
+        div(id="nofullpage") 
+            .categories.section.container
+                .breadcrumbs
+                    ul.breadcrumbs__list
+                        li.breadcrumbs__list-item  
+                            a(href="/") Главная                        
+                        li.breadcrumbs__list-item  
+                            | Главная
+                .categories__wrap
+                    .categories__left
+                        .categories__sticky-wrap
+                            .categories__header
+                                h2.categories__title мясорубки
+                            .categories__main
+                                .categories__info
+                                    img(src="images/catalog/freshMeat.svg" alt="Мясорубки").categories__img.svg
+                                    p.categories__desc Мясору́бка — механическое или электромеханическое приспособление для изготовления мясного фарша и измельчения других видов продуктов. Также используется для изготовления лапши, спагетти, печенья, 
+                                        |сока из мягких фруктов и овощей. Аналогичное устройство, применяемое в пищевой промышленности, называется волчок[1].
+                                        |Мясорубка была изобретена в XIX веке бароном Карлом Дрезом[2].
+                    .categories__right
+                        .categories__header
+                            select.categories__select
+                                option(value="по популярности") По популярности
+                                option(value="по популярности") По цене
+                                option(value="по популярности") По новизне
+                        .categories__main
+                            .categories__grid
+                                include common/product-card
+                                include common/product-card
+                                include common/product-card
+                                include common/product-card
+                                include common/product-card
+                                include common/product-card
+                                include common/product-card
+                                include common/product-card
+            include common/new.pug 
+            include common/footer.pug 

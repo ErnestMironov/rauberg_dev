@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     padding: 33px 0;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     top: 0;
     left: 0;
     z-index: 2;
@@ -22,7 +22,7 @@
             .header__search-box.active {
                 top: 60px;
                 background-color: $dark;
-                color: #fff;
+                color: #ffffff;
                 padding-bottom: 20px;
             }
         }
@@ -45,7 +45,7 @@
         padding-right: 26px;
         margin-right: 36px;
         border-right: 1px solid rgba(196, 196, 196, 0.1);
-        transition: linear .18s;
+        transition: linear 0.18s;
 
         img {
             max-width: 100%;
@@ -58,12 +58,11 @@
             border-right: 0;
             order: 2;
         }
-
     }
 
     &__search-box {
         margin-right: 33px;
-        transition: .2s linear;
+        transition: 0.2s linear;
 
         @include mobile {
             &.active {

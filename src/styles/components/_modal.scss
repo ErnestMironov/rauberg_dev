@@ -17,7 +17,6 @@
 
     &--is-ready[aria-hidden="false"] {
         visibility: visible;
-
     }
 
     &__window {
@@ -26,7 +25,7 @@
         position: absolute;
         overflow: hidden;
         top: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
         border-radius: 15px;
         width: 900px;
@@ -79,16 +78,16 @@
         align-items: center;
         justify-content: center;
 
-        &:after {
+        &::after {
             content: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.01628 4.88068L1.04033 0.875H2.84244L4.99173 3.89205L7.15757 0.875H8.95967L5.81839 4.88068L9.125 9.125H7.3229L4.99173 5.86932L2.6771 9.125H0.875L4.01628 4.88068Z' fill='%23262527'/%3E%3C/svg%3E%0A");
             display: block;
-            transition: all ease-out .17s;
+            transition: all ease-out 0.17s;
         }
 
         &:hover {
             border: 1px solid $gold;
 
-            &:after {
+            &::after {
                 transform: rotate(180deg);
             }
         }
@@ -136,7 +135,7 @@
     }
 
     &__right {
-        background-color: #EBECF5;
+        background-color: #ebecf5;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -170,7 +169,7 @@
 
         &::placeholder {
             text-transform: uppercase;
-            color: #56575C;
+            color: #56575c;
         }
     }
 
@@ -179,7 +178,7 @@
             &:invalid {
                 border-bottom: 1px solid red;
 
-                &~.modal__input-not-complete {
+                & ~ .modal__input-not-complete {
                     display: block;
                 }
             }
@@ -187,12 +186,11 @@
             &:valid {
                 border-bottom: 1px solid green;
 
-                &~.modal__input-complete {
+                & ~ .modal__input-complete {
                     display: block;
                 }
             }
         }
-
     }
 
     &__input-complete,
@@ -221,9 +219,9 @@
     &__textarea-wrap {
         position: relative;
 
-        &:before,
-        &:after {
-            content: '';
+        &::before,
+        &::after {
+            content: "";
             display: block;
             width: 100%;
             height: 1px;
@@ -232,11 +230,11 @@
             left: 0;
         }
 
-        &:before {
+        &::before {
             top: 38px;
         }
 
-        &:after {
+        &::after {
             top: 76px;
         }
     }

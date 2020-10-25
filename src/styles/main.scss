@@ -1,27 +1,46 @@
-@import 'common/_reset.scss';
-@import 'common/_variables.scss';
-@import 'common/_base.scss';
+@import "common/_reset.scss";
 
-@import 'libs/_swiper-bundle.scss';
-@import 'libs/_choices.scss';
+@import "common/_variables.scss";
 
-@import 'components/_btn.scss';
-@import 'components/_burger.scss';
-@import 'components/_search-box.scss';
-@import 'components/_breadcrumbs.scss';
-@import 'components/_menu.scss';
-@import 'components/_products.scss';
-@import 'components/_header.scss';
-@import 'components/_product-card.scss';
-@import 'components/_catalog.scss';
-@import 'components/_popular.scss';
-@import 'components/_main-slider.scss';
-@import 'components/_new.scss';
-@import 'components/_footer.scss';
-@import 'components/_categories.scss';
-@import 'components/_product-page.scss';
-@import 'components/_form.scss';
-@import 'components/_modal.scss';
+@import "common/_base.scss";
+
+@import "libs/_swiper-bundle.scss";
+
+@import "libs/_choices.scss";
+
+@import "components/_btn.scss";
+
+@import "components/_burger.scss";
+
+@import "components/_search-box.scss";
+
+@import "components/_breadcrumbs.scss";
+
+@import "components/_menu.scss";
+
+@import "components/_products.scss";
+
+@import "components/_header.scss";
+
+@import "components/_product-card.scss";
+
+@import "components/_catalog.scss";
+
+@import "components/_popular.scss";
+
+@import "components/_main-slider.scss";
+
+@import "components/_new.scss";
+
+@import "components/_footer.scss";
+
+@import "components/_categories.scss";
+
+@import "components/_product-page.scss";
+
+@import "components/_form.scss";
+
+@import "components/_modal.scss";
 
 
-@import 'common/_fix.scss';
+@import "common/_fix.scss";

@@ -39,7 +39,6 @@
     &__main {
         margin-top: 32px;
         display: flex;
-
     }
 
     &__left {
@@ -61,7 +60,7 @@
         circle {
             stroke-dasharray: 80;
             animation: dashMove 13s linear alternate infinite;
-            stroke: #C5C6D1;
+            stroke: #c5c6d1;
             fill: none;
         }
     }
@@ -69,7 +68,7 @@
     &__desc {
         font-size: 15px;
         line-height: 20px;
-        color: #A1A6B1;
+        color: #a1a6b1;
         margin-top: 25px;
     }
 

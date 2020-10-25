@@ -1,152 +1,151 @@
 html {
-  font-size: 15px;
-  color: black;
+    font-size: 15px;
+    color: black;
 
-  @include container {
-    font-size: 14px;
-  }
+    @include container {
+        font-size: 14px;
+    }
 }
 
 body {
-  font-family: 'Play', sans-serif;
-  background-color: $grey;
-  color: white;
+    font-family: "Play", sans-serif;
+    background-color: $grey;
+    color: white;
 }
 
 .subtitle {
-  font-size: 38px;
-  line-height: 44px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: bold;
+    font-size: 38px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
 
-  @include mobile {
-    font-size: 26px;
-    line-height: normal;
-  }
+    @include mobile {
+        font-size: 26px;
+        line-height: normal;
+    }
 
-  &__color {
-    color: $blue;
-  }
+    &__color {
+        color: $blue;
+    }
 }
 
 .container {
-  max-width: 1590px;
-  display: block;
-  margin: auto;
+    max-width: 1590px;
+    display: block;
+    margin: auto;
 
-  @include container {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
+    @include container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
-  @include tablet {
-    padding: 0 30px;
-  }
+    @include tablet {
+        padding: 0 30px;
+    }
 
-  @include mobile {
-    padding: 0 20px;
-  }
-
+    @include mobile {
+        padding: 0 20px;
+    }
 }
 
 .section {
-
-  &:not(:first-child) {
-    .fp-tableCell {
-      padding-top: 76px;
+    &:not(:first-child) {
+        .fp-tableCell {
+            padding-top: 76px;
+        }
     }
-  }
 }
 
 .slider-pag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: visible;
 
-  .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    border: 1px solid $gold;
-    background: transparent;
-    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .2s;
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        border: 1px solid $gold;
+        background: transparent;
+        transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
 
-    &:before {
-      content: '';
-      display: block;
-      width: 9px;
-      height: 9px;
-      background: $gold;
-      border-radius: 50%;
-      position: relative;
-      left: 2px;
-      top: 2px;
-      transform: scale(0);
-      transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .2s;
+        &::before {
+            content: "";
+            display: block;
+            width: 9px;
+            height: 9px;
+            background: $gold;
+            border-radius: 50%;
+            position: relative;
+            left: 2px;
+            top: 2px;
+            transform: scale(0);
+            transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
+        }
+
+        &:hover {
+
+            @include desktop {
+                opacity: 1;
+            }
+        }
+
+        &-active {
+            background: transparent;
+
+            &::before {
+                transform: scale(1);
+            }
+        }
     }
-
-    &:hover {
-      @include desktop {
-        opacity: 1;
-      }
-    }
-
-    &-active {
-      background: transparent;
-
-      &:before {
-        transform: scale(1);
-      }
-    }
-  }
 }
 
 .slider-nav {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 
-  &__separator {
-    width: 30px;
-    height: 1px;
-    background-color: $gold;
-  }
-
-  &__arrow {
-    transition: linear .2s;
-    cursor: pointer;
-
-    &_up {
-      padding-bottom: 15px;
-
-      &:hover {
-        transform: translateY(-5px);
-      }
+    &__separator {
+        width: 30px;
+        height: 1px;
+        background-color: $gold;
     }
 
-    &_down {
-      padding-top: 15px;
+    &__arrow {
+        transition: linear 0.2s;
+        cursor: pointer;
 
-      &:hover {
-        transform: translateY(5px);
-      }
+        &_up {
+            padding-bottom: 15px;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        &_down {
+            padding-top: 15px;
+
+            &:hover {
+                transform: translateY(5px);
+            }
+        }
     }
-  }
 }
 
 .auto-height {
-  height: auto !important;
-
-  .fp-tableCell {
     height: auto !important;
-  }
+
+    .fp-tableCell {
+        height: auto !important;
+    }
 }
 
 .tab-pane {
-  display: none;
+    display: none;
 
-  &.active {
-    display: block;
-  }
+    &.active {
+        display: block;
+    }
 }

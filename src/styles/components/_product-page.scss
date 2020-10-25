@@ -19,8 +19,8 @@
         top: 0;
         height: 100vh;
 
-        &:after {
-            content: '';
+        &::after {
+            content: "";
             display: block;
             width: 50vw;
             background-color: $dark;
@@ -63,21 +63,21 @@
         right: 0;
         width: 100%;
 
-        &:after {
-            content: '';
+        &::after {
+            content: "";
             display: block;
             position: absolute;
             width: 50vw;
             right: 0;
             top: 0;
-            background-color: #191D25;
+            background-color: #191d25;
             height: 1px;
             z-index: 1;
         }
 
         .swiper-slide {
-            border-left: 1px solid #191D25;
-            border-right: 1px solid #191D25;
+            border-left: 1px solid #191d25;
+            border-right: 1px solid #191d25;
             cursor: pointer;
 
             picture {
@@ -112,7 +112,6 @@
         @include mobile {
             width: 100%;
         }
-
     }
 
     @media only screen and (max-width: 1200px) {
@@ -142,25 +141,25 @@
 
     @media only screen and (max-width: 1440px) {
         &__code {
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
     }
 
     &__buy-box {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        box-align: center;
+        flex-align: center;
         align-items: center;
         justify-content: space-between;
         margin-top: 28px;
-        margin-bottom: 8px
+        margin-bottom: 8px;
     }
 
     @media only screen and (max-width: 1200px) {
         &__price-box {
-            margin-bottom: 15px
+            margin-bottom: 15px;
         }
     }
 
@@ -168,13 +167,13 @@
         font-size: 24px;
         font-weight: 700;
         color: $blue;
-        margin-right: 10px
+        margin-right: 10px;
     }
 
     &__price-old {
         font-size: 15px;
         font-weight: 700;
-        text-decoration: line-through
+        text-decoration: line-through;
     }
 
     &__price {
@@ -182,8 +181,8 @@
         line-height: 40px;
         font-weight: bold;
 
-        &:after {
-            content: '₽';
+        &::after {
+            content: "₽";
             display: inline-block;
             font-size: 19px;
             line-height: 18px;
@@ -191,8 +190,12 @@
             font-weight: 400;
             margin-left: 3px;
             position: relative;
-            bottom: -5px
+            bottom: -5px;
         }
+    }
+
+    &__btn-wrap {
+        display: flex;
     }
 
     &__one-click-btn,
@@ -215,7 +218,7 @@
 
     &__buy-btn {
         background-color: $gold;
-        color: #fff;
+        color: #ffffff;
     }
 
     &__recommendation {
@@ -225,77 +228,77 @@
     }
 
     &__controls-price {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
+        box-flex: 0;
         flex: 0 0 auto;
-        padding-right: 10px
+        flex: 0 0 auto;
+        padding-right: 10px;
     }
 
     @media only screen and (max-width: 767px) {
         &__controls-price {
             padding-right: 0;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
     }
 
     &__controls {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
+        box-pack: justify;
+        flex-pack: justify;
         justify-content: space-between;
         max-width: 716px;
         width: 100%;
-        margin-bottom: 23px
+        margin-bottom: 23px;
     }
 
     @media only screen and (max-width: 767px) {
         &__controls {
             margin-bottom: 20px;
-            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center
+            flex-wrap: wrap;
+            box-pack: center;
+            flex-pack: center;
+            justify-content: center;
         }
     }
 
     &__controls-btn {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 400px;
+        box-flex: 0;
         flex: 0 0 400px;
-        margin-right: 50px
+        flex: 0 0 400px;
+        margin-right: 50px;
     }
 
     @media only screen and (max-width: 1440px) {
         &__controls-btn {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 250px;
+            box-flex: 0;
             flex: 0 0 250px;
-            margin-right: 20px
+            flex: 0 0 250px;
+            margin-right: 20px;
         }
     }
 
     @media only screen and (max-width: 767px) {
         &__controls-btn {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 100%;
+            box-flex: 0;
+            flex: 0 0 100%;
             flex: 0 0 100%;
             margin-right: 0;
-            margin-bottom: 50px
+            margin-bottom: 50px;
         }
     }
 
     &__shops {
         position: relative;
         margin-bottom: 70px;
-        max-width: 716px
+        max-width: 716px;
     }
 
     @media only screen and (max-width: 767px) {
         &__shops {
-            margin-bottom: 40px
+            margin-bottom: 40px;
         }
     }
 
@@ -303,16 +306,16 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 18px;
-        letter-spacing: .05em;
-        color: #fff;
-        margin-bottom: 16px
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        margin-bottom: 16px;
     }
 
     &__shops-list {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        margin-bottom: 23px
+        margin-bottom: 23px;
     }
 
     &__shops-item {
@@ -365,25 +368,25 @@
 
     @media only screen and (max-width: 767px) {
         &__shops-item {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 50%;
+            box-flex: 0;
             flex: 0 0 50%;
-            max-width: 50%
+            flex: 0 0 50%;
+            max-width: 50%;
         }
     }
 
     &__tabs {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        border-bottom: 2px solid rgba(255, 255, 255, .1);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 20px;
-        max-width: 716px
+        max-width: 716px;
     }
 
     @media only screen and (max-width: 1200px) {
         &__tabs {
-            max-width: 100%
+            max-width: 100%;
         }
     }
 
@@ -391,7 +394,7 @@
         &__tabs {
             margin-left: -15px;
             margin-right: -15px;
-            overflow-x: auto
+            overflow-x: auto;
         }
     }
 
@@ -410,46 +413,46 @@
 
     @media only screen and (max-width: 1280px) {
         &__tabs-link {
-            font-size: 14px
+            font-size: 14px;
         }
     }
 
     @media only screen and (max-width: 767px) {
         &__tabs-link {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 auto;
+            box-flex: 0;
+            flex: 0 0 auto;
             flex: 0 0 auto;
             padding: 14px 15px;
-            width: auto
+            width: auto;
         }
     }
 
     @media only screen and (min-width: 1025px) {
         &__tabs-link:hover {
-            color: #fff
+            color: #ffffff;
         }
     }
 
     &__tabs-link::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 0;
         bottom: -2px;
         background: $gold;
         height: 2px;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     @media only screen and (max-width: 767px) {
         &__tabs-link::before {
-            display: none
+            display: none;
         }
     }
 
     &__tabs-link.active {
-        color: #fff
+        color: #ffffff;
     }
 
     @media only screen and (max-width: 767px) {
@@ -459,86 +462,86 @@
     }
 
     &__tabs-link.active::before {
-        width: 100%
+        width: 100%;
     }
 
     @media only screen and (max-width: 1200px) {
         &__options {
             padding-bottom: 40px;
             max-width: 100%;
-            min-height: auto
+            min-height: auto;
         }
     }
 
     &__specifications {
-        position: relative
+        position: relative;
     }
 
     &__specifications-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        border-bottom: 1px solid #C5C6D1;
+        border-bottom: 1px solid #c5c6d1;
         padding: 20px 23px;
         font-family: roboto;
-        font-size: 16px
+        font-size: 16px;
     }
 
     @media only screen and (max-width: 1440px) {
         &__specifications-row {
-            padding: 12px 20px
+            padding: 12px 20px;
         }
     }
 
     @media only screen and (max-width: 767px) {
         &__specifications-row {
             padding: 10px 0;
-            font-size: 13px
+            font-size: 13px;
         }
     }
 
     &__specifications-name {
         color: #99a1b2;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
+        box-flex: 0;
         flex: 0 0 50%;
-        padding-right: 10px
+        flex: 0 0 50%;
+        padding-right: 10px;
     }
 
     &__specifications-value {
         font-weight: 500;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%
+        box-flex: 0;
+        flex: 0 0 50%;
+        flex: 0 0 50%;
     }
 
     &__description {
         padding-left: 30px;
         padding-top: 10px;
-        line-height: 26px
+        line-height: 26px;
     }
 
     @media only screen and (max-width: 1440px) {
         &__description {
             padding-left: 5px;
-            padding-top: 0
+            padding-top: 0;
         }
     }
 
     &__description p {
-        font-weight: 300
+        font-weight: 300;
     }
 
     &__review {
         position: relative;
         padding-top: 20px;
-        padding-left: 15px
+        padding-left: 15px;
     }
 
     @media only screen and (max-width: 767px) {
         &__review {
             padding-top: 0;
-            padding-left: 0
+            padding-left: 0;
         }
     }
 
@@ -550,31 +553,31 @@
         font-weight: 700;
         color: $blue;
         cursor: pointer;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
         margin-bottom: 40px;
-        text-transform: uppercase
+        text-transform: uppercase;
     }
 
     @media only screen and (max-width: 1440px) {
         &__review-btn {
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
     }
 
     @media only screen and (min-width: 1025px) {
         &__review-btn:hover {
-            color: #fff
+            color: #ffffff;
         }
 
         &__review-btn:hover::after,
         &__review-btn:hover::before {
-            background: #fff
+            background: #ffffff;
         }
     }
 
     &__review-btn::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 50%;
@@ -583,12 +586,12 @@
         height: 2px;
         background: $blue;
         border-radius: 2px;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     &__review-btn::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 5px;
         top: 50%;
@@ -597,116 +600,116 @@
         width: 2px;
         background: $blue;
         border-radius: 2px;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out
+        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     &__review-list {
-        padding-bottom: 100px
+        padding-bottom: 100px;
     }
 
     @media only screen and (max-width: 1440px) {
         &__review-list {
-            padding-bottom: 30px
+            padding-bottom: 30px;
         }
     }
 
     &__review-item {
         border-bottom: 1px solid #202531;
         padding-bottom: 45px;
-        margin-bottom: 45px
+        margin-bottom: 45px;
     }
 
     @media only screen and (max-width: 1440px) {
         &__review-item {
             padding-bottom: 20px;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
     }
 
     &__review-item:last-child {
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     &__review-date {
         font-family: roboto;
         color: #5b5f66;
-        margin-bottom: 13px
+        margin-bottom: 13px;
     }
 
     &__review-name {
         font-family: play;
         font-weight: 700;
         font-size: 20px;
-        margin-bottom: 15px
+        margin-bottom: 15px;
     }
 
     &__review-text {
         color: #a1a6b1;
         font-size: 15px;
         font-family: roboto;
-        line-height: 25px
+        line-height: 25px;
     }
 
     &__review-text p {
-        margin: 0
+        margin: 0;
     }
 
     &__noReview {
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        box-align: center;
+        flex-align: center;
         align-items: center;
         padding-bottom: 70px;
-        border-bottom: 1px solid #202531
+        border-bottom: 1px solid #202531;
     }
 
     @media only screen and (max-width: 1440px) {
         &__noReview {
-            padding-bottom: 30px
+            padding-bottom: 30px;
         }
     }
 
     &__noReview-icon {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 68px;
+        box-flex: 0;
+        flex: 0 0 68px;
         flex: 0 0 68px;
         width: 68px;
         height: 68px;
         border-radius: 50%;
         background: $blue;
-        display: -webkit-box;
-        display: -ms-flexbox;
+        display: box;
+        display: flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+        box-align: center;
+        flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
+        box-pack: center;
+        flex-pack: center;
         justify-content: center;
-        margin-right: 23px
+        margin-right: 23px;
     }
 
     &__noReview-icon svg {
-        fill: #fff
+        fill: #ffffff;
     }
 
     &__noReview-title {
         font-size: 20px;
         margin-bottom: 5px;
-        font-weight: 700
+        font-weight: 700;
     }
 
     @media only screen and (max-width: 767px) {
         &__noReview-title {
-            font-size: 18px
+            font-size: 18px;
         }
     }
 
     &__noReview-text {
         color: #bbc3d5;
-        font-size: 15px
+        font-size: 15px;
     }
 }
